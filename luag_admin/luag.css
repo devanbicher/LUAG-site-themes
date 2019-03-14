@@ -1,0 +1,22 @@
+/* This is the default css file for the admin theme */
+
+/* DON'T Change these first 2 styles they are important! */
+
+/*I need this to fix a little issue with buttons for the other dispalys in views */
+.views-display-top ul.secondary {
+    background-color: transparent;
+    float: left;
+}
+
+/* This hides a warning message on the user page if they want to save a note to themselves, it can safely be ignored and they don't need to see it */
+
+.page-user-edit .messages.error{
+    display:none;
+}
+
+
+/*
+****************************
+** add styles below here
+****************************
+*/
