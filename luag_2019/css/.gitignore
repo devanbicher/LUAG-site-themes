@@ -1,0 +1,3 @@
+#this is the gitignore file that I will use in general to avoid untracked backup/previous saves of emacs files ending in ~
+
+*.*~
