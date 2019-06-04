@@ -1,4 +1,4 @@
-/*
+B/*
  * @file
  * global.styles
  *
@@ -52,8 +52,8 @@
     --link-light: #c0d2ec; /*Light blue*/
     --font-backup: 16px; /*back-up size for calc-unsupported browsers*/
     --font-default: calc(14px + 0.2vw); /* Default scaling font size */
-    --font-fam: 'Frutiger', Helvetica, Arial, Sans-serif; /* Primary font set */
-    --font-fam-2: 'Frutiger', Helvetica, Arial, Sans-serif; /* Secondary font set */
+    --font-fam: Helvetica, Arial, Sans-serif; /* Primary font set */
+    --font-fam-2: Helvetica, Arial, Sans-serif; /* Secondary font set */
     --footer: #333;
 }
 /* =============================================================================
@@ -64,12 +64,15 @@
  * feature as this relies on being able to set a pseudo font family on the HTML
  * element. If you need to set default font properties of any kind use the BODY
  * element as these can be overridden using font theme settings. */
+* {
+    box-sizing: border-box;
+}
 html {
   background: #fff;
 }
 
 body {
-  font-family: 'Frutiger', Helvetica, Arial, Sans-serif;
+  font-family: Helvetica, Arial, Sans-serif;
   font-family: var(--font-fam);
   background: #ccc;
   -webkit-font-smoothing: antialiased;
@@ -203,61 +206,36 @@ pre, code, tt, samp, kbd, var {
  *   Header and Logo
  * ========================================================================== */
 #header {
-  background-color: white;
-  padding: 10px 16vw;
+  background-color: rgba(80, 45, 14, 0.80);
+  padding: 2px 6vw;
   display: flex;
   justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 #lehigh-header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-#cas-logo {
-    display: flex;
-}
-#cas-logo a {
-    display: inline-block;
-    position: relative;
-    color: #502d0e;
-    color: var(--lehigh-brown);
-    font-size: 20px;
-    font-size: calc(16px + 0.2vw);
-    line-height: 1.4;
-    text-transform: uppercase;
-}
-#cas-logo a:hover {
-    text-decoration: none;
-}
-#cas-logo a:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 2%;
-    width: 0%;
-    margin-left: 2%;
-    border-bottom: 2px solid #502d0e;
-    border-bottom: 2px solid var(--lehigh-brown);
-    transition: 0.3s ease;
-}
-#cas-logo a:hover:after {
-    width: 96%;
-    left: 0;
 }
 #lehigh-logo {
     display: inline-block;
-    margin: 0px 10px;
     margin-left: 0;
-    border-right: 1px solid #502d0e;
-    border-right: 1px solid var(--lehigh-brown);
-    padding-right: 10px;
+}
+#lehigh-logo a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .site-logo {
-    display: block;
-    max-height: 45px;
-    max-height: calc(30px + 1vw);
-    min-width: 125px;
+    height: 30px;
+    box-sizing: border-box;
+    padding: 5px;
 }
 /*Site name and department*/
 #header-wrap {
@@ -265,7 +243,7 @@ pre, code, tt, samp, kbd, var {
 }
 #headertext a {
     display: block;
-    color: #495a74;
+    color: rgba(80, 45, 14, 0.85);
     font-weight: bold;
     padding: 2px 12px;
     line-height: 1.1;
@@ -304,95 +282,108 @@ a#title-a {
     width: 98%;
     left: 0;
 }
+/*Menu Styles for dropdown with header logo*/
 
+#menu-bar {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 0px 6vw;
+    z-index: 10;
+}
+#menu-bar .region-inner {
+    display: flex;
+    justify-content: space-between;
+}
 /* =============================================================================
  *   Primary, Secondary and Menu Bar region menus
  * ========================================================================== */
-ul.menu li {
-    margin: 0;
-}
-.nav {
-    padding:0;
-    margin:0;
-    margin:auto;
-    padding: 0 16vw;
-    background: #475874;
-    background: var(--menu);
-}
+/* ul.menu li { */
+/*     margin: 0; */
+/* } */
+/* .nav { */
+/*     padding:0; */
+/*     margin:0; */
+/*     margin:auto; */
+/*     padding: 0 16vw; */
+/*     background: #475874; */
+/*     background: var(--menu); */
+/* } */
 
-.nav ul,
-.nav ul.menu {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
+/* .nav ul, */
+/* .nav ul.menu { */
+/*     margin: 0; */
+/*     padding: 0; */
+/*     text-align: center; */
+/* } */
 
-.nav li {
-    display:inline-block;
-    flex-basis: 0;
-    flex-grow: 1;
-    background-color: #475974;
-    background-color: var(--menu);
-    transition: .35s;
-    white-space: nowrap;
-}
-.nav li a:hover {
-    background-color: #ffffff;
-}
-.nav li a,
-.nav ul.menu li a {
-    padding: 5px 10px;
-    display: flex;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    letter-spacing: 2px;
-}
-.menu-wrapper {
-    margin: 0;
-    padding: 0;
-}
-.nav li a:visited,
-.nav ul.menu li a:visited {}
+/* .nav li { */
+/*     display:inline-block; */
+/*     flex-basis: 0; */
+/*     flex-grow: 1; */
+/*     background-color: #475974; */
+/*     background-color: var(--menu); */
+/*     transition: .35s; */
+/*     white-space: nowrap; */
+/* } */
+/* .nav li a:hover { */
+/*     background-color: #ffffff; */
+/* } */
+/* .nav li a, */
+/* .nav ul.menu li a { */
+/*     padding: 5px 10px; */
+/*     display: flex; */
+/*     justify-content: center; */
+/*     color: white; */
+/*     text-decoration: none; */
+/*     letter-spacing: 2px; */
+/* } */
+/* .menu-wrapper { */
+/*     margin: 0; */
+/*     padding: 0; */
+/* } */
+/* .nav li a:visited, */
+/* .nav ul.menu li a:visited {} */
 
-.nav li a:hover, .nav ul.menu li a:hover {
-    cursor: pointer;
-    color: #475974;
-    color: var(--menu);
-}
+/* .nav li a:hover, .nav ul.menu li a:hover { */
+/*     cursor: pointer; */
+/*     color: #475974; */
+/*     color: var(--menu); */
+/* } */
 
-.nav .block {
-  margin-bottom: 0;
-}
-.nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
+/* .nav .block { */
+/*   margin-bottom: 0; */
+/* } */
+/* .nav ul { */
+/*     display: flex; */
+/*     justify-content: center; */
+/*     flex-wrap: wrap; */
+/*     width: 100%; */
+/* } */
 /******* Mean Menu ********/
-.mean-nav .menu-wrapper {
-    margin: 0px;
-}
-.mean-container .mean-bar {
-    background: var(--menu);
-}
-.mean-container .mean-nav {
-    background: white;
-}
-.mean-container .mean-nav ul li a {
-    color: #475974;
-    color: var(--menu);
-}
-.mean-container .mean-nav ul li a {
-    border-top: solid 2px #d9dde1;
-}
-.mean-container .mean-nav ul li:first-child a {
-     border: none;
-}
-.mean-container .mean-nav ul li a:hover {
-    background: var(--menu-low-opacity);
-}
+/* .mean-nav .menu-wrapper { */
+/*     margin: 0px; */
+/* } */
+/* .mean-container .mean-bar { */
+/*     background: var(--menu); */
+/* } */
+/* .mean-container .mean-nav { */
+/*     background: white; */
+/* } */
+/* .mean-container .mean-nav ul li a { */
+/*     color: #475974; */
+/*     color: var(--menu); */
+/* } */
+/* .mean-container .mean-nav ul li a { */
+/*     border-top: solid 2px #d9dde1; */
+/* } */
+/* .mean-container .mean-nav ul li:first-child a { */
+/*      border: none; */
+/* } */
+/* .mean-container .mean-nav ul li a:hover { */
+/*     background: var(--menu-low-opacity); */
+/* } */
 /* =============================================================================
  *   Page content header
  * ========================================================================== */
@@ -422,6 +413,7 @@ ul.menu li {
 #page-wrapper {}
 #page {
     border-radius: 5px;
+    position: relative;
 }
 #page .container {}
 /*
@@ -659,9 +651,6 @@ ul.links li {
  * ========================================================================== */
 #breadcrumb {
   margin: 10px 0;
-  /* Breadcrumbs are not visiable by default, remove the line below to change this.  
-     But be sure to style them. */
-  display:none;
 }
 /* If the label is set to show in theme settings the label class is added */
 #breadcrumb .breadcrumb-label {

@@ -1,0 +1,312 @@
+/*
+  This is the default layout template for nice menus, and will provide
+  a starting point for the look of your menus. To customize, it's
+  recommended to create a custom CSS file using this file as a template,
+  then configure the module to use your custom CSS file
+  (this is done in the global settings tab of the theme administration.)
+
+  See README.txt and the handbook page (http://drupal.org/node/185543)
+  for more information on using the CSS.
+*/
+
+/******************************
+ Global CSS for ALL menu types
+******************************/
+#menu-bar .clearfix:after {
+    content: none;
+}
+
+
+.block-content ul.nice-menu,
+.block-content ul.nice-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul.nice-menu li {
+  border-top: 0;
+  float: left; /* LTR */
+  background-color: rgba(238, 238, 238, 0);
+}
+ul.nice-menu a {
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul.nice-menu ul {
+  top: 76px;
+  left: -1px; /* LTR */
+  border: 0;
+  margin-right: 0; /* LTR */
+}
+
+ul.nice-menu ul li {
+  width: 12.5em;
+}
+ul.nice-menu li:hover a {
+    color: #502d0e;
+}
+ul.nice-menu li:hover,
+ul.nice-menu .menuparent ul li {
+  background-color: rgba(238, 238, 238, .85);
+}
+ul.nice-menu .menuparent ul li {
+    transition: background-color .15s;
+}
+ul.nice-menu .menuparent ul li:hover {
+    background: rgba(186, 186, 186, 0.75); /* LTR */
+}
+ul.nice-menu .menuparent ul li:hover {
+    background: rgba(186, 186, 186, 0.75); /* LTR */
+}
+ul.nice-menu .menuparent ul li a {
+    color: #502d0e;
+    transition: color .15s, font-weight .15s;
+    justify-content: start;
+    margin-left: 15px;
+}
+ul.nice-menu .menuparent ul li:hover a {
+    color: white;
+    font-weight: 400;
+}
+ul.nice-menu .menuparent ul li {
+    height: 76px;
+    background-image: none;
+}
+
+/******************************
+ VERTICAL (left/right) menus
+******************************/
+
+/* This is the default width of all vertical menus. */
+ul.nice-menu-right,
+ul.nice-menu-left,
+ul.nice-menu-right li,
+ul.nice-menu-left li {
+  width: 12.5em;
+}
+
+/* VERTICAL menus where submenus pop RIGHT (default). */
+ul.nice-menu-right ul {
+  width: 12.5em;
+  left: 12.5em;
+  top: -1px;
+}
+
+ul.nice-menu-right ul ul {
+  width: 12.5em;
+  left: 12.5em;
+  top: -1px;
+}
+
+ul.nice-menu-right li.menuparent,
+ul.nice-menu-right li li.menuparent {
+  background: #eee url("../images/right-arrow.svg") right center no-repeat;
+  background-size: 12px;
+}
+
+ul.nice-menu-right li.menuparent:hover,
+ul.nice-menu-right li li.menuparent:hover {
+  background: #ccc url("../images/right-arrow.svg") right center no-repeat;
+}
+
+/* VERTICAL menus where submenus pop LEFT. */
+ul.nice-menu-left li ul {
+  width: 12.5em;
+  left: -12.65em;
+  top: -1px;
+}
+
+ul.nice-menu-left li ul li ul {
+  width: 12.5em;
+  left: -12.65em;
+  top: -1px;
+}
+
+ul.nice-menu-left li.menuparent,
+ul.nice-menu-left li li.menuparent {
+  background: #eee url("../images/left-arrow.svg") left center no-repeat;
+  background-size: 12px;
+}
+
+ul.nice-menu-left li.menuparent:hover,
+ul.nice-menu-left li li.menuparent:hover {
+  background: #ccc url("../images/arrow-left.png") left center no-repeat;
+}
+
+ul.nice-menu-left a,
+ul.nice-menu-left ul a {
+  padding-left: 14px;
+}
+
+/******************************
+ HORIZONTAL (down) menus
+******************************/
+
+ul.nice-menu-down {
+  float: left; /* LTR */
+  border: 0;
+}
+
+ul.nice-menu-down li {
+
+}
+ul.nice-menu-down a {
+    font-size: calc(8px + 0.5vw);
+    font-weight: 200;
+}
+ul.nice-menu-down .menu-depth-1 > a {
+    font-weight: 600;
+}
+
+ul.nice-menu-down li li {
+  border-top: 0;
+}
+
+ul.nice-menu-down ul {
+  left: 0; /* LTR */
+}
+
+ul.nice-menu-down ul li {
+  clear: both;
+}
+
+ul.nice-menu-down li ul li ul {
+  left: 12.5em; /* LTR */
+  top: -1px;
+}
+
+ul.nice-menu-down .menuparent a {
+    padding-right: 15px; /* LTR */
+}
+
+/* ul.nice-menu-down li.menuparent { */
+/*     background-image: url("../images/down-arrow.svg"); /\* LTR *\/ */
+/*     background-size: 12px; */
+/*     background-position: 90% center; */
+/*     background-repeat: no-repeat; */
+/* } */
+
+/* ul.nice-menu-down li.menuparent:hover { */
+/*     background-image: url("../images/BrownUpArrow.svg"); */
+/* } */
+
+/******************************
+ Garland-specific CSS
+******************************/
+
+/**
+ * Global CSS for ALL menu types
+ */
+ul.nice-menu > li {
+  margin: 0;
+  padding-left: 0; /* LTR */
+  width: calc(12vw - 40px);
+  max-width: calc(40px + 6vw);
+  height: 76px;
+}
+
+#header-region ul.nice-menu li {
+  margin: 0;
+  /* Padding rules are needed to deal with Garland's header line-height. */
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  background: #eee;
+}
+
+#header-region ul.nice-menu ul {
+  top: 1.8em;
+  left: -1px; /* LTR */
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin-right: 0; /* LTR */
+}
+
+#header-region ul.nice-menu ul {
+  top: 1.7em;
+}
+
+/**
+ * HORIZONTAL (down) menus
+ */
+#header-region ul.nice-menu-down li ul li ul {
+  left: 12.5em; /* LTR */
+  top: -1px;
+}
+
+#header-region ul.nice-menu-down li.menuparent {
+  background: #eee url("../images/arrow-down.png") right center no-repeat; /* LTR */
+}
+
+#header-region ul.nice-menu-down li.menuparent:hover {
+  background: #ccc url("../images/arrow-down.png") right center no-repeat; /* LTR */
+}
+
+#header-region ul.nice-menu-down li li.menuparent {
+  background: #eee url("../images/arrow-right.png") right center no-repeat; /* LTR */
+}
+
+#header-region ul.nice-menu-down li li.menuparent:hover {
+  background: #ccc url("../images/arrow-right.png") right center no-repeat; /* LTR */
+}
+
+.block-content .nice-menu a {
+  background-image: none;
+}
+
+/*Search Icon*/
+#menu-search-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    transition: .2s;
+}
+ul.nice-menu .last:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+ul.nice-menu .last:hover a img {
+    filter: brightness(50%) sepia(1) hue-rotate(55deg) saturate(223%) brightness(108%);
+    transform: scale(1.15);
+}
+#menu-search-icon img {
+    transition: transform .15s, filter .1s;
+}
+
+/*Arrow styles*/
+ul.nice-menu .menuparent > a {
+    margin-left: calc(1px + .25vw);
+}
+ul.nice-menu-down li.menuparent > a:after {
+    content: '';
+    position: relative;
+    left: calc(2px + .5vw);
+    height: 20px;
+    width: 20px;
+    background-image: url(../images/down-arrow.svg);
+    background-size: 12px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+ul.nice-menu-down li.menuparent:hover > a:after {
+    background-image: url("../images/BrownUpArrow.svg");
+}
+
+@media only screen and (max-width: 1024px) {
+    #block-nice-menus-1 {
+	display: none;
+    }
+    #menu-bar {
+	background-color: rgba(238, 238, 238, .85)
+    }
+    div#luag-logo {
+	color: #333;
+    }
+    div#luag-logo-svg {
+	border-color: #333;
+    }
+}
+

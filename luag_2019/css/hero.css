@@ -1,0 +1,128 @@
+.region-blockgroup-hero-group {
+    position: relative;
+}
+#block-block-6 {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    bottom: 55%;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    text-align: center;
+    color: white;
+}
+#headline-top, #headline-bottom {
+    text-transform: uppercase;
+}
+#headline-top {
+    color: #ddd;
+    font-weight: 200;
+    font-size: calc(18px + 0.4vw);
+    letter-spacing: 2px;
+}
+#headline-bottom {
+    color: white;
+    font-size: calc(16px + 6vw);
+    font-weight: 300;
+    letter-spacing: 12px;
+    line-height: 1.1em;
+}
+
+/*Social Media*/
+.hero-social-icon img {
+    height: calc(10px + .4vw);
+    width: calc(10px + .4vw);
+    transition: 0.2s 0s, filter .1s 0s;
+}
+#block-block-7 {
+    width: 30px;
+    width: fit-content;
+    position:  absolute;
+    z-index: 1;
+    bottom: 45%;
+    right: 0%;
+    padding: 10%;
+    padding-top: 1%;
+    transform: translateY(50%);
+}
+#block-block-7 .block-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+#hero-social-text {
+    writing-mode: vertical-rl;
+    line-height: 0;
+    color: #ddd;
+    font-size: calc(12px + 0.5vw);
+    letter-spacing: 2px;
+    font-weight: 200;
+    text-transform: uppercase;
+    padding-bottom: 8px;
+}
+.hero-social-icon {
+    margin-top: 5px;
+    transition: 0.2s .2s;
+}
+.hero-social-icon:hover a img {
+    filter: brightness(50%) sepia(1) hue-rotate(55deg) saturate(223%) brightness(108%);
+}
+#block-block-7:hover .hero-social-icon {
+    margin-top: 15px;
+    transition: .2s 0s;
+}
+#block-block-7:hover .hero-social-icon img {
+    transform: scale(1.4);
+    transition: .2s .2s, filter .1s 0s;
+}
+.hero-social-icon a {
+    padding: 10px;
+}
+@media screen and (max-width: 1024px) {
+    #block-block-7 .block-content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	position: relative;
+    }
+
+
+    #block-block-7 {
+	width: 30px;
+	width: fit-content;
+	position: absolute;
+	z-index: 1;
+	bottom: 12%;
+	right: 50%;
+	padding: 10%;
+	transform: translatex(50%);
+    }
+
+    #hero-social-text {
+	writing-mode: horizontal-tb;
+	line-height: 1;
+	color: #ddd;
+	font-size: calc(20px + 0.5vw);
+	letter-spacing: 2px;
+	font-weight: 200;
+	text-transform: uppercase;
+	padding: 0;
+    }
+
+    .hero-social-icon {
+	margin-top: 0px;
+	margin-right:10px;
+    }
+
+    #block-block-7:hover .hero-social-icon {
+	margin-top: 0;
+    }
+    .hero-social-icon img {
+	height: calc(20px + .4vw);
+	width: calc(20px + .4vw);
+    }
+    #block-block-7:hover .hero-social-icon img {
+	transform: scale(1);
+    }
+}

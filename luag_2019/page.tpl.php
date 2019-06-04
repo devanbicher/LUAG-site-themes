@@ -92,137 +92,123 @@
  */
 ?>
 <div id="page-wrapper">
-  <div id="page" class="container <?php print $classes; ?>">
-    <div id="emergencyalert">
-      <script type="text/javascript" src="https://s3.amazonaws.com/widgets.omnilert.net/1397c767b627776244abee8c6f1e1f96-1691"></script>
-    </div>
+	<div id="page" class="container <?php print $classes; ?>">
+		<div id="emergencyalert">
+			<script type="text/javascript" src="https://s3.amazonaws.com/widgets.omnilert.net/1397c767b627776244abee8c6f1e1f96-1691"></script>
+		</div>
 
-    <!-- !Leaderboard Region -->
-    <?php print render($page['leaderboard']); ?>
+		<!-- !Leaderboard Region -->
+		<?php print render($page['leaderboard']); ?>
 
 
-      <header id="header" role="banner">
-      <div id="lehigh-header">
-            <?php if ($site_logo): ?>
-            <div id="lehigh-logo">
-              <a href="http://www.lehigh.edu" title="<?php print t('Home'); ?>" rel="home" ><?php print $logo_img; ?></a>
-            </div>
-            <div id="cas-logo">
-              <a href="https://cas.cas2.lehigh.edu/">College&nbsp;of</br>Arts&nbsp;and&nbsp;Sciences</a>
-            </div>
-          <?php endif; ?>
-      </div>
-        <!-- !Branding -->
-           <div id="header-wrap">
-             <div id="headertext">
-               <a href="/">
-                 <div id="dept">Clean Theme New Website</div>
-               </a>
-               <a href="/" id="title-a">
-                 <div id="title">luag</div>
-               </a>
-             </div>
-           </div>
+		<header id="header" role="banner">
+			<div id="lehigh-header">
+				<?php if ($site_logo): ?>
+					<div id="lehigh-logo">
+						<a href="http://www.lehigh.edu" title="<?php print t('Home'); ?>" rel="home" ><?php print $logo_img; ?></a>
+					</div>   
+				<?php endif; ?>
+			</div>
 
-      <!-- !Header Region -->
-      <?php print render($page['header']); ?>
+			<!-- !Header Region -->
+			<?php print render($page['header']); ?>
 
-    </header>
+		</header>
 
-    <!-- !Navigation -->
-    <?php print render($page['menu_bar']); ?>
-    <?php if ($primary_navigation): print $primary_navigation; endif; ?>
-    <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>
+		<!-- !Navigation -->
+		<?php print render($page['menu_bar']); ?>
+    <!--<?php if ($primary_navigation): print $primary_navigation; endif; ?>
+    <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>-->
 
     <!-- !Breadcrumbs -->
     <?php if ($breadcrumb): print $breadcrumb; endif; ?>
-
-    <!-- !Messages and Help -->
-    <?php print $messages; ?>
-    <?php print render($page['help']); ?>
-
     <!-- !Secondary Content Region -->
     <?php print render($page['secondary_content']); ?>
 
     <!-- !Highlighted region -->
     <?php print render($page['highlighted']); ?>
 
+    <!-- !Messages and Help -->
+    <?php print $messages; ?>
+    <?php print render($page['help']); ?>
+
+
     <div id="columns" class="columns clearfix">
-      <main id="content-column" class="content-column" role="main">
-        <div class="content-inner">
-          <<?php print $tag; ?> id="main-content">
+    	<main id="content-column" class="content-column" role="main">
+    		<div class="content-inner">
+    			<<?php print $tag; ?> id="main-content">
 
-            <?php print render($title_prefix); // Does nothing by default in D7 core ?>
+    			<?php print render($title_prefix); // Does nothing by default in D7 core ?>
 
-            <!-- !Main Content Header -->
-            <?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links = render($action_links)): ?>
-              <header<?php print $content_header_attributes; ?>>
+    			<!-- !Main Content Header -->
+    			<?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links = render($action_links)): ?>
+    				<header<?php print $content_header_attributes; ?>>
 
-                <?php if ($title): ?>
-                  <h1 id="page-title">
-                    <?php print $title; ?>
-                  </h1>
-                <?php endif; ?>
+    				<?php if ($title): ?>
+    					<h1 id="page-title">
+    						<?php print $title; ?>
+    					</h1>
+    				<?php endif; ?>
 
-                <?php if ($primary_local_tasks || $secondary_local_tasks || $action_links): ?>
-                  <div id="tasks">
+    				<?php if ($primary_local_tasks || $secondary_local_tasks || $action_links): ?>
+    					<div id="tasks">
 
-                    <?php if ($primary_local_tasks): ?>
-                      <ul class="tabs primary clearfix"><?php print render($primary_local_tasks); ?></ul>
-                    <?php endif; ?>
+    						<?php if ($primary_local_tasks): ?>
+    							<ul class="tabs primary clearfix"><?php print render($primary_local_tasks); ?></ul>
+    						<?php endif; ?>
 
-                    <?php if ($secondary_local_tasks): ?>
-                      <ul class="tabs secondary clearfix"><?php print render($secondary_local_tasks); ?></ul>
-                    <?php endif; ?>
+    						<?php if ($secondary_local_tasks): ?>
+    							<ul class="tabs secondary clearfix"><?php print render($secondary_local_tasks); ?></ul>
+    						<?php endif; ?>
 
-                    <?php if ($action_links = render($action_links)): ?>
-                      <ul class="action-links clearfix"><?php print $action_links; ?></ul>
-                    <?php endif; ?>
+    						<?php if ($action_links = render($action_links)): ?>
+    							<ul class="action-links clearfix"><?php print $action_links; ?></ul>
+    						<?php endif; ?>
 
-                  </div>
-                <?php endif; ?>
+    					</div>
+    				<?php endif; ?>
 
-              </header>
-            <?php endif; ?>
+    			</header>
+    		<?php endif; ?>
 
-            <!-- !Main Content -->
-            <?php if ($content = render($page['content'])): ?>
-              <div id="content" class="region">
-                <?php print $content; ?>
-              </div>
-            <?php endif; ?>
+    		<!-- !Main Content -->
+    		<?php if ($content = render($page['content'])): ?>
+    			<div id="content" class="region">
+    				<?php print $content; ?>
+    			</div>
+    		<?php endif; ?>
 
-            <!-- !Feed Icons -->
-            <?php print $feed_icons; ?>
+    		<!-- !Feed Icons -->
+    		<?php print $feed_icons; ?>
 
-            <?php print render($title_suffix); // Prints page level contextual links ?>
+    		<?php print render($title_suffix); // Prints page level contextual links ?>
 
-          </<?php print $tag; ?>><!-- /end #main-content -->
+    		</<?php print $tag; ?>><!-- /end #main-content -->
 
-          <!-- !Content Aside Region-->
-          <?php print render($page['content_aside']); ?>
+    		<!-- !Content Aside Region-->
+    		<?php print render($page['content_aside']); ?>
 
-        </div><!-- /end .content-inner -->
-      </main><!-- /end #content-column -->
+    	</div><!-- /end .content-inner -->
+    </main><!-- /end #content-column -->
 
-      <!-- !Sidebar Regions -->
-      <?php $sidebar_first = render($page['sidebar_first']); print $sidebar_first; ?>
-      <?php $sidebar_second = render($page['sidebar_second']); print $sidebar_second; ?>
+    <!-- !Sidebar Regions -->
+    <?php $sidebar_first = render($page['sidebar_first']); print $sidebar_first; ?>
+    <?php $sidebar_second = render($page['sidebar_second']); print $sidebar_second; ?>
 
-    </div><!-- /end #columns -->
+</div><!-- /end #columns -->
 
-    <!-- !Tertiary Content Region -->
-    <?php print render($page['tertiary_content']); ?>
+<!-- !Tertiary Content Region -->
+<?php print render($page['tertiary_content']); ?>
 
-    <!-- !Footer -->
-    <!--<?/*php if ($page['footer'] || $attribution): */?>-->
-      <footer<?php print $footer_attributes; ?>>
-        <?php print render($page['footer']); ?>
-        <?php print $attribution; ?>
-        <div id='footercurrent'>
-           <script type="text/javascript" src="//www.lehigh.edu/~inltswms/include/footer/lu-footer-min.js" ></script>
-         </div>
-      </footer>
-    <!--<?/*php endif; */?>-->
-  </div>
+<!-- !Footer -->
+<!--<?/*php if ($page['footer'] || $attribution): */?>-->
+<footer<?php print $footer_attributes; ?>>
+<?php print render($page['footer']); ?>
+<?php print $attribution; ?>
+<div id='footercurrent'>
+	<script type="text/javascript" src="//www.lehigh.edu/~inltswms/include/footer/lu-footer-min.js" ></script>
+</div>
+</footer>
+<!--<?/*php endif; */?>-->
+</div>
 </div>
