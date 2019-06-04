@@ -68,3 +68,18 @@
     object-fit: cover;
     filter: brightness(0.60);
 }
+
+@media only screen and (max-width: 1024px) {
+    #luag-logo-svg img {
+    	width: 40px;
+    }
+    #luag-lu {
+    	font-size: 17px;
+    }
+    #luag-ag {
+    	font-size: 25px;
+    }
+    #block-block-4 {
+    	height: 58px;
+    }
+}
