@@ -120,14 +120,18 @@
     <!--<?php if ($primary_navigation): print $primary_navigation; endif; ?>
     <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>-->
 
-    <!-- !Breadcrumbs -->
-    <?php if ($breadcrumb): print $breadcrumb; endif; ?>
     <!-- !Secondary Content Region -->
     <?php print render($page['secondary_content']); ?>
 
-    <!-- !Highlighted region -->
+    <!-- !Header Image and text  -->
     <?php print luag_header_images($page['luag_vars']); ?>
-    
+    <div id="top-header-text-wrapper">
+    <?php print luag_header_title($page['luag_vars']); ?>
+    <!-- !Breadcrumbs -->
+    <?php if ($breadcrumb): print $breadcrumb; endif; ?>                                                                       
+    </div>
+
+    <!-- !Highlighted region -->
     <?php print render($page['highlighted']); ?>
 
 

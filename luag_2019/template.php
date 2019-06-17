@@ -153,11 +153,22 @@ function luag_header_images($luag_vars){
     
     //we will start with the simple 'html' way of displaying the image, then move to the drupal-y way of doing things.
     
-    $head_string = '<div class="header_image_wrapper"><div class="header_backgroung_image"><img src="/files/luagdev/'.$head_image.'"><h2 class="header-name">'.$head_title.'</h2></div></div>';
+    $head_string = '<div class="header_image_wrapper"><div class="header_backgroung_image"><img src="/files/luagdev/'.$head_image.'"></div></div>';
 
     
 
 //don't forget that we will need a fallback header image, maybe the same one as search. not sure yet. 
     return $head_string;
 
+}
+
+function luag_header_title($luag_vars){
+    $menu_parent = $luag_vars['header_menu_parent'];
+    
+    if($menu_parent == 'exception'){
+        return '';
+    }
+    else{
+        return '<h2 class="top-header-titles">'.$menu_parent.'</h2>';
+    }
 }
