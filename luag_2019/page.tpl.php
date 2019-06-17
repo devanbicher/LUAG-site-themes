@@ -126,7 +126,10 @@
     <?php print render($page['secondary_content']); ?>
 
     <!-- !Highlighted region -->
+    <?php print luag_header_images($page['luag_vars']); ?>
+    
     <?php print render($page['highlighted']); ?>
+
 
     <!-- !Messages and Help -->
     <?php print $messages; ?>

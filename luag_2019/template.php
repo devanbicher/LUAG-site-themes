@@ -52,12 +52,44 @@ function adaptivetheme_subtheme_process_html(&$vars) {
  * Override or insert variables for the page templates.
 */
 
-function clean_adaptive_theme_2017_preprocess_page(&$vars) {
+
+function luag_2019_preprocess_page(&$vars){
+    //dpm($vars);
+    
+    $menu_parent = '';
+    foreach($vars['main_menu'] as $menu => $menu_atts){
+        if(strpos($menu,'active-trail')){
+            $menu_parent = $menu_atts['title'];
+        }
+    }
+    //page is not in the main menu
+    //the 'menu_block_2' needs to be the name of the menu block that is creating the sidebar second
+
+   if(empty($menu_parent)){
+        if(!empty($vars['page']['sidebar_second']['menu_block_1'])){
+            $parent_menu_key = array_keys($vars['page']['sidebar_second']['menu_block_1']['#content'])[0];
+            $menu_parent = $vars['page']['sidebar_second']['menu_block_1']['#content'][$parent_menu_key]['#title'];
+        }
+    }
+                                                                                   
+     
+    if(empty($menu_parent)){
+        //default behaviour.  We need an image here to not break anything
+        $menu_parent='LUAG';
+    }
+    // Here we need to do something if the menu parent doesn't exist or whatever
+    
+    //some exceptions where we don't need this header image
+    if($vars['is_front']){
+        $menu_parent = 'exception';
+    }
+    
+    $vars['page']['luag_vars']['header_menu_parent'] = $menu_parent;
+    
 }
 
-function clean_adaptive_theme_2017_process_page(&$vars) {
-   
 
+function luag_2019_process_page(&$vars) {
 }
 
 
@@ -92,3 +124,40 @@ function adaptivetheme_subtheme_preprocess_block(&$vars) {
 function adaptivetheme_subtheme_process_block(&$vars) {
 }
 // */
+
+
+function luag_header_images($luag_vars){
+
+//outline of what to do:
+//videos
+
+    
+    $menu_parent = $luag_vars['header_menu_parent'];
+    
+    if($menu_parent == 'exception'){
+        return '';
+    }
+    $head_tax_img = new EntityFieldQuery();
+    $head_tax_img->entityCondition('entity_type','taxonomy_term')
+                 ->entityCondition('bundle','header_images')
+                 ->propertyCondition('name',$menu_parent,'=');
+
+    $tax_term = $head_tax_img->execute();
+
+    if(!empty($tax_term['taxonomy_term'])){
+        $tax_item = entity_load('taxonomy_term',array(array_keys($tax_term['taxonomy_term'])[0]));
+        $head_key = array_keys($tax_item)[0];
+        $head_title = $tax_item[$head_key]->name;
+        $head_image = $tax_item[$head_key]->field_header_image['und'][0]['filename'];            
+    }
+    
+    //we will start with the simple 'html' way of displaying the image, then move to the drupal-y way of doing things.
+    
+    $head_string = '<div class="header_image_wrapper"><div class="header_backgroung_image"><img src="/files/luagdev/'.$head_image.'"><h2 class="header-name">'.$head_title.'</h2></div></div>';
+
+    
+
+//don't forget that we will need a fallback header image, maybe the same one as search. not sure yet. 
+    return $head_string;
+
+}
