@@ -83,3 +83,120 @@
     	height: 58px;
     }
 }
+
+/*Internal hero images*/
+#internal-hero {
+    position: relative;
+    line-height: 0;
+}
+#internal-hero-img:before {
+    content: '';
+    box-shadow: inset 0px 160px 100px -100px rgba(0, 0, 0, 0.75), inset 1px -120px 136px -100px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+#internal-hero-text {
+    position: absolute;
+    z-index: 2;
+    bottom: 5%;
+    left: 16vw;
+    color: white;
+}
+
+#internal-hero-img img {
+    filter: brightness(0.6) saturate(1.1) contrast(1.1);
+    width: 100%;
+    height: 50vh;
+    min-height: 400px;
+    object-position: 50% 20%;
+    object-fit: cover;
+}
+
+#internal-hero-title {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.2em;
+}
+
+.breadcrumb {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.6em;
+    font-size: 14px;
+    cursor: default;
+}
+.breadcrumb a {
+    color: white;
+}
+.delimiter {
+    margin: 0 10px;
+}
+
+/*Internal pages*/
+
+.not-front.node-type-page #page-title {
+    color: #502d0e;
+    margin-top: 3vw;
+    font-size: 48px;
+}
+
+/*sidebar menu*/
+
+.int-side-menu h2.block-title {
+    color: #502d0e;
+    margin: 0;
+    padding-left: 10px;
+    background: #e0e0e0;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+}
+
+.int-side-menu {
+    border: 1px solid #ccc;
+    margin-top: 4vw;
+    border-bottom: none;
+}
+
+.int-side-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+/* .int-side-menu .menu-block-wrapper > ul > li { */
+/*     border-bottom: 1px solid #ccc; */
+/* } */
+.int-side-menu ul li {
+    list-style: none;
+    margin: 0;
+}
+
+.int-side-menu a {
+    font-weight: 600;
+    color: #502d0e;
+    background-image: none;
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0 20px 16px;
+}
+
+.int-side-menu a.active {
+    color: #72be44;
+}
+.int-side-menu a:after {
+    content: "›";
+    position: relative;
+    right: -10px;
+    transition-duration: 0.15s;
+}
+
+.int-side-menu a:hover:after {
+    right: -14px;
+}

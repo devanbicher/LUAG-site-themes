@@ -124,11 +124,13 @@
     <?php print render($page['secondary_content']); ?>
 
     <!-- !Header Image and text  -->
+    <div id="internal-hero">
     <?php print luag_header_images($page['luag_vars']); ?>
-    <div id="top-header-text-wrapper">
+    <div id="internal-hero-text">
     <?php print luag_header_title($page['luag_vars']); ?>
     <!-- !Breadcrumbs -->
     <?php if ($breadcrumb): print $breadcrumb; endif; ?>                                                                       
+    </div>
     </div>
 
     <!-- !Highlighted region -->

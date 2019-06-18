@@ -71,7 +71,8 @@ function luag_2019_preprocess_page(&$vars){
             $menu_parent = $vars['page']['sidebar_second']['menu_block_1']['#content'][$parent_menu_key]['#title'];
         }
     }
-                                                                                   
+
+   
      
     if(empty($menu_parent)){
         //default behaviour.  We need an image here to not break anything
@@ -79,6 +80,11 @@ function luag_2019_preprocess_page(&$vars){
     }
     // Here we need to do something if the menu parent doesn't exist or whatever
     
+    if($menu_parent != strip_tags($menu_parent)){
+        //This means that this is the search page because the menu contains html and thus the strip_tags is different than the string
+        $menu_parent = 'Search';
+    }
+ 
     //some exceptions where we don't need this header image
     if($vars['is_front']){
         $menu_parent = 'exception';
@@ -153,7 +159,7 @@ function luag_header_images($luag_vars){
     
     //we will start with the simple 'html' way of displaying the image, then move to the drupal-y way of doing things.
     
-    $head_string = '<div class="header_image_wrapper"><div class="header_backgroung_image"><img src="/files/luagdev/'.$head_image.'"></div></div>';
+    $head_string = '<div id="internal-hero-img"><img src="/files/luagdev/'.$head_image.'"></div>';
 
     
 
@@ -169,6 +175,6 @@ function luag_header_title($luag_vars){
         return '';
     }
     else{
-        return '<h2 class="top-header-titles">'.$menu_parent.'</h2>';
+        return '<h2 id="internal-hero-title">'.$menu_parent.'</h2>';
     }
 }
