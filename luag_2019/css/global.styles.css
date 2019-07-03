@@ -1,4 +1,4 @@
-B/*
+/*
  * @file
  * global.styles
  *
@@ -50,8 +50,6 @@ B/*
     --lehigh-brown: #502d0e; /* Lehigh Brown */
     --link: #ff9900; /* bright orange */
     --link-light: #c0d2ec; /*Light blue*/
-    --font-backup: 16px; /*back-up size for calc-unsupported browsers*/
-    --font-default: calc(14px + 0.2vw); /* Default scaling font size */
     --font-fam: Helvetica, Arial, Sans-serif; /* Primary font set */
     --font-fam-2: Helvetica, Arial, Sans-serif; /* Secondary font set */
     --footer: #333;
@@ -87,48 +85,40 @@ body {
 /* Font sizes, colors, line-height white space, <a> tags */
 /****************************************/
 /*Default font sizes*/
-
 h1, h2, h3, h4, h5, h6, p, .node-content div, ol, ul {
     line-height: 1.6em;
 }
 h1#page-title {
-    font-size: 32px;
-    font-size: calc(25px + 0.6vw);
+    font-size: calc(24px + 1.5vw)
 }
 h1 {
     font-size: 28px;
-    font-size: calc(22px + 0.5vw);
 }
 h2 {
-    font-size: 25px;
-    font-size: calc(20px + 0.5vw);
+    font-size: 24px;
 }
 h3 {
     font-size: 22px;
-    font-size: calc(20px + 0.2vw);
 }
 h4 {
     font-size: 20px;
-    font-size: calc(18px + 0.2vw);
 }
 h5 {
     font-size: 18px;
-    font-size: calc(16px + 0.25vw);
 }
 h6 {
-    font-size: 18px;
-    font-size: calc(16px + 0.2vw);
+    font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6 {
-    letter-spacing: 2px;
+    margin: 0 0 0.5em;
 }
 p,
 ul,
 ol,
 .node-content p,
 .node-content div{
-    font-size: var(--font-backup);
-    font-size: var(--font-default);
+    font-size: 14px;
+    margin: 0 0 1em;
 }
 #columns p:before,
 #columns h1:before,
@@ -207,7 +197,7 @@ pre, code, tt, samp, kbd, var {
  * ========================================================================== */
 #header {
   background-color: rgba(80, 45, 14, 0.80);
-  padding: 2px 6vw;
+  padding: 2px 3vw;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
@@ -289,7 +279,7 @@ a#title-a {
     top: 50px;
     left: 0;
     width: 100%;
-    padding: 0px 6vw;
+    padding: 0px 3vw;
     z-index: 10;
 }
 #menu-bar .region-inner {
@@ -423,7 +413,10 @@ a#title-a {
     background: white;
     overflow: auto;
     overflow-y: hidden;
-    padding: 0 16vw;
+    padding: 0 10vw;
+}
+.content-inner, .region.sidebar {
+    padding: 2vh 2vw;
 }
 
 /*
@@ -456,7 +449,7 @@ a#title-a {
 #footer {
     background-color: #333;
     background-color: var(--footer);
-    padding: 0px 16vw;
+    padding: 0px 12vw;
 }
 #fc A {
     color: white !important;

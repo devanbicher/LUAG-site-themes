@@ -84,7 +84,19 @@ function luag_2019_preprocess_page(&$vars){
         //This means that this is the search page because the menu contains html and thus the strip_tags is different than the string
         $menu_parent = 'Search';
     }
+
+    
+    if(!empty($vars['page']['content']['system_main']['nodes'])){
+        $nodenums = array_keys($vars['page']['content']['system_main']['nodes']);
+
+        if(!empty($vars['page']['content']['system_main']['nodes'][$nodenums[0]]['#bundle'])){
+            if($vars['page']['content']['system_main']['nodes'][$nodenums[0]]['#bundle'] == 'exhibition'){
+                $menu_parent = 'exception';
+            }
+        }
+    }
  
+
     //some exceptions where we don't need this header image
     if($vars['is_front']){
         $menu_parent = 'exception';

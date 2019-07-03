@@ -19,6 +19,8 @@
   stylesheets[screen][] = css/luag.css
   stylesheets[screen][] = css/dropdown.css
   stylesheets[screen][] = css/hero.css
+  stylesheets[screen][] = css/nodeannouncements.css
+  stylesheets[screen][] = css/announcementsview.css
 
   ; Print - uncomment to load basic print styles.
   ; stylesheets[print][] = css/print.css

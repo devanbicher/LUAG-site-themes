@@ -103,7 +103,7 @@
     position: absolute;
     z-index: 2;
     bottom: 5%;
-    left: 16vw;
+    left: 12vw;
     color: white;
 }
 
@@ -196,7 +196,12 @@
     right: -10px;
     transition-duration: 0.15s;
 }
-
+.int-side-menu .menu-depth-2 a {
+    padding-left: 30px;
+}
+.int-side-menu .menu-depth-3 a {
+    padding-left: 40px;
+}
 .int-side-menu a:hover:after {
     right: -14px;
 }
