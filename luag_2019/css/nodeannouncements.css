@@ -1,0 +1,124 @@
+/* Announcement Page for single announcement */
+
+.node-type-announcement #page-title {
+    display: block;
+}
+@media only screen and (min-width: 1024px) {
+    .node-type-announcement .content-inner,
+    .node-type-announcement.sidebar-second .content-inner {
+	margin-right: calc(60% - 250px);
+	margin-left: 0;
+    }
+    .node-type-announcement .region-sidebar-second {
+	width: 30%;
+	margin-left: calc(-60% + 240px);
+    }
+}
+.node-type-announcement .region-sidebar-second {
+    margin-top: 70px;
+}
+.announcements-sidebar {
+    background-color: #e0e0e0;
+    padding: 5px 18px;
+    width: 315px;
+}
+.announcements-sidebar .block-title {
+    display: block;
+}
+@media only screen and (max-width: 1024px) {
+    .announcements-sidebar {
+	width: 100%;
+    }
+    .node-type-announcement .region-sidebar-second {
+	margin-top: 0;
+    }
+}
+.announcements-sidebar h2 {
+    margin: 10px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #808080;
+    color: #808080;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 2px;
+    width: 100%;
+}
+.announcements-sidebar .views-label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #808080;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.announcements-sidebar .item-list li {
+    list-style: none;
+    margin: 0;
+}
+.announcements-sidebar .item-list ul {
+    margin: 0;padding: 0;line-height: 2em;
+}
+.announcements-sidebar .views-field {
+    margin-bottom: 20px;
+}
+.node-type-announcement .views-field-field-type {
+    padding: 0 0 15px;
+    margin: 0 0 30px;
+    border-bottom: 1px solid #CCC;
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.node-type-announcement .views-field-field-type .field-content {
+    font-size: 16px;
+}
+.announcements-sidebar .views-field-field-additional-info .field-content {
+    font-size: 14px;
+}
+.node-type-announcement .field-name-field-date .date-display-single, .node-type-announcement .field-name-field-location .field-item {
+    color: #808080;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 10px 0;
+}
+.node-type-announcement .field-name-field-date .date-display-range {
+    font-size: 18px;
+}
+.node-type-announcement .field-name-body {
+    margin: 20px 0 0;
+}
+.node-type-announcement .views-field-field-image {
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+}
+ .node-type-announcement .announcement-svg-icon {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--main);
+}
+ .node-type-announcement .views-field-field-image {
+    align-items: center;
+    line-height: 0;
+}
+.node-type-announcement .views-field-field-image .field-content {
+ 
+}
+.node-type-announcement .views-field-field-image img {
+    width: 100%;
+}
+.node-type-announcement .views-field-field-image img:not([src$=".svg"]) {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+    object-position: left;
+}
+.node-type-announcement .views-field-field-image img[src$=".svg"] {
+    width: 200px;
+    padding: 30px;
+}
+
+.node-type-announcement .views-field-title {
+    color: #6a6962;
+}

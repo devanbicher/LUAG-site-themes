@@ -85,8 +85,11 @@ body {
 /* Font sizes, colors, line-height white space, <a> tags */
 /****************************************/
 /*Default font sizes*/
-h1, h2, h3, h4, h5, h6, p, .node-content div, ol, ul {
+h1, h2, h3, h4, h5, h6, .node-content div, ol, ul {
     line-height: 1.6em;
+}
+p {
+    line-height: 2em;
 }
 h1#page-title {
     font-size: calc(24px + 1.5vw)
@@ -498,6 +501,7 @@ a#title-a {
     color: white;
     font-family: "Frutiger";
     font-weight: 700;
+    line-height: 1.6em;
 }
 #block-block-1 {
     flex-basis: 200px;
@@ -638,7 +642,10 @@ ul.links li {
 /*Regions can be nested, such as when using Panels*/
 .region-inner .region-inner {}
 /*Footer region*/
-.region-footer {}
+.region-footer {
+    border-bottom: 1px solid #888;
+    box-shadow: 0 1px #666;
+}
 /* =============================================================================
  *   Breadcrumbs
  * ========================================================================== */
@@ -1207,3 +1214,44 @@ p.color-accent-3{
 /* =============================================================================
  *  Specific View Styling
  * ========================================================================== */
+/*Slick hide on load properly*/
+.slick__slider:not(.slick-initialized) .slide:not(:first-of-type) {
+    display: none;
+}
+/* Slick Slider Arrows */                     
+.slick-prev:before {
+    content: "‹"!important;
+}
+.slick-next:before {
+    content: "›"!important;
+}
+.slick-arrow::before {
+    font-family: 'Montserrat', 'Frutiger';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 0;
+    font-size: 56px;
+    width: 30px;
+    height: 80px;
+    letter-spacing: 4px;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+}
+.slick-arrow.slick-next:before {
+    letter-spacing: -3px;
+}
+nav.slick__arrow {
+    position: absolute;
+    top: 49%;
+}
+.slick-arrow:before {
+    opacity: 1;
+    color: #666;
+    transition: .1s;
+}
+.slick-arrow:hover:before {
+    color: #999;
+}
