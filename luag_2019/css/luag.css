@@ -6,7 +6,15 @@
 .clearfix:after {
     content: none;
 }
+select {
+    background: transparent;
+}
 
+input[type="submit"] {
+    background: white !important;
+    -webkit-appearance: inherit;
+    border: 1px solid #ccc;
+}
 
 #block-block-4 {
     display: flex;
@@ -570,4 +578,14 @@
 }
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .views-field-field-exhibition-dates {
     font-size: 12px;
+}
+
+/* Temporary styles added by Devan to make things presentable. */
+/* exhibitions placeholder page. */
+
+.page-exhibitions .views-row{
+    border-bottom: solid grey 1px;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+
 }

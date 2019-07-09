@@ -20,3 +20,10 @@
 ** add styles below here
 ****************************
 */
+
+/* make sure svg's aren't huge whend displayed in the admin theme areas. */
+
+img[src$=".svg"]{
+    max-width: 100px;
+    background-color: #f3f4ee;
+}

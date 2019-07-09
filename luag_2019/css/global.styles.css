@@ -42,16 +42,17 @@
 /** Variables inherit values from parents, so one can be overwritten in a more narrow
     scope by re-assigning a value to it in a direct parent of what you're working on **/
 :root {
-    --main: #475974; /* CAS Dark Blue */
-    --complement: white; /* Complement to CAS Dark Blue*/
-    --menu: #475974; /* CAS Dark Blue */
-    --menu-low-opacity: #47597433; /* Cas Dark Blue 20% opacity */
-    --main-font: #333; /* dark gray */
-    --lehigh-brown: #502d0e; /* Lehigh Brown */
-    --link: #ff9900; /* bright orange */
-    --link-light: #c0d2ec; /*Light blue*/
-    --font-fam: Helvetica, Arial, Sans-serif; /* Primary font set */
-    --font-fam-2: Helvetica, Arial, Sans-serif; /* Secondary font set */
+    --main: #808080;
+    --accent: #72be44;
+    --complement: white;
+    --menu: #475974;
+    --menu-low-opacity: #47597433;
+    --main-font: #333;
+    --lehigh-brown: #502d0e;
+    --link: #ff9900;
+    --link-light: #c0d2ec;
+    --font-fam: Helvetica, Arial, Sans-serif;
+    --font-fam-2: Helvetica, Arial, Sans-serif;
     --footer: #333;
 }
 /* =============================================================================
@@ -170,8 +171,8 @@ a:hover {
 .view-content a,
 .block-content a,
 .node-content a {
-    transition: background-position 0.25s cubic-bezier(.33,.66,.66,1);
-    background-image: linear-gradient(to bottom, var(--link-light) 0%, var(--link-light) 100%);
+    transition: all .2s, background-position 0.25s cubic-bezier(.33,.66,.66,1);
+    background-image: linear-gradient(to bottom, #8eca68 0%, #8eca68 100%);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 0 1.05em;
