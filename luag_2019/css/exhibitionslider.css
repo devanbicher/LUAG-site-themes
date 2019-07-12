@@ -79,7 +79,7 @@
     transition: 0.2s;
 }
 .front-exhibition-slider .slick--skin--boxed > .slick__slider > .slick-list {
-    margin: -10px;
+    margin: 0 0 0 -10px;
     padding:0 16% 0 0;
 }
 .front-exhibition-slider .slick--skin--boxed-carousel .slide__content {
