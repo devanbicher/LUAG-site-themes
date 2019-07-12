@@ -24,7 +24,7 @@
 /* -Specific View Styling */
 
 @charset "UTF-8";
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100&display=swap');
 @font-face {
     font-family: 'Frutiger';
     src: url('../frutiger/frutigerltstd-light-webfont.eot');
@@ -1242,7 +1242,7 @@ p.color-accent-3{
     transform: translateY(-50%);
 }
 .slick-arrow.slick-next:before {
-    letter-spacing: -3px;
+    letter-spacing: -8px;
 }
 nav.slick__arrow {
     position: absolute;
