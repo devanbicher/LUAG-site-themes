@@ -590,4 +590,7 @@ input[type="submit"] {
 
 }
 
-/* a comment to try pushing to the new repo in the cas-web-team organization */
+/*Front page*/
+.front #columns {
+    padding: 50px 10vw;
+}
