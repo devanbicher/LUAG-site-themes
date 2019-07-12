@@ -22,6 +22,7 @@
   stylesheets[screen][] = css/nodeannouncements.css
   stylesheets[screen][] = css/announcementsview.css
   stylesheets[screen][] = css/exhibitionslider.css
+  stylesheets[screen][] = css/announcementsslider.css
 
   ; Print - uncomment to load basic print styles.
   ; stylesheets[print][] = css/print.css
