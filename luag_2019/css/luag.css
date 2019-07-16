@@ -581,14 +581,22 @@ input[type="submit"] {
 }
 
 /* Temporary styles added by Devan to make things presentable. */
-/* exhibitions placeholder page. */
 
+
+/*** exhibitions placeholder page. ***/
 .page-exhibitions .views-row{
     border-bottom: solid grey 1px;
     padding-bottom: 20px;
     margin-bottom: 50px;
-
 }
+
+/*** videos view placeholder ***/
+.view-id-videos .views-row{
+    margin-top: 60px;
+}
+    
+
+
 
 /*Front page*/
 .front #columns {
