@@ -31,6 +31,9 @@ img[src$=".svg"]{
 
 /**  Styles for exhibition form **/
 
+.page-node-edit.node-type-exhibition label[for="edit-field-exhibition-status-und"],
+.page-node-edit.node-type-exhibition #edit-field-exhibition-status-und,
+.page-node-edit.node-type-exhibition  #edit-field-exhibition-status-und .form-type-radio,
 .page-node-add-exhibition label[for="edit-field-exhibition-status-und"],
 .page-node-add-exhibition #edit-field-exhibition-status-und,
 .page-node-add-exhibition #edit-field-exhibition-status-und .form-type-radio{
@@ -38,6 +41,8 @@ img[src$=".svg"]{
     padding-right: 20px;
 }
 
+.page-node-edit.node-type-exhibition .start-date-wrapper,
+.page-node-edit.node-type-exhibition .end-date-wrapper,
 .page-node-add-exhibition .start-date-wrapper,
 .page-node-add-exhibition .end-date-wrapper{
     display:inline-block;
@@ -48,6 +53,9 @@ img[src$=".svg"]{
 
 /**  Styles for announcement form **/
 
+.page-node-edit.node-type-announcement label[for="edit-field-status-und"],
+.page-node-edit.node-type-announcement #edit-field-status-und,
+.page-node-edit.node-type-announcement #edit-field-status-und .form-type-radio,
 .page-node-add-announcement label[for="edit-field-status-und"],
 .page-node-add-announcement #edit-field-status-und,
 .page-node-add-announcement #edit-field-status-und .form-type-radio{
@@ -55,7 +63,8 @@ img[src$=".svg"]{
     padding-right: 20px;
 }
 
-
+.page-node-edit.node-type-announcement .start-date-wrapper,
+.page-node-edit.node-type-announcement .end-date-wrapper,
 .page-node-add-announcement .start-date-wrapper,
 .page-node-add-announcement .end-date-wrapper{
     display:inline-block;
