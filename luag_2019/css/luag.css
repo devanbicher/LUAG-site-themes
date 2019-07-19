@@ -210,6 +210,9 @@ input[type="submit"] {
 .int-side-menu .menu-depth-3 a {
     padding-left: 40px;
 }
+.int-side-menu .menu-depth-4 a {
+    padding-left: 50px;
+}
 .int-side-menu a:hover:after {
     right: -14px;
 }
