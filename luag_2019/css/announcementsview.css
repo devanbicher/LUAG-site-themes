@@ -34,7 +34,7 @@
 .announcements-page .view-filters {
     padding: 0 0 20px;
     border-bottom: 1px solid #CCCCCC;
-    height: 100px;
+    height: 120px;
 }
 
 .announcements-page .views-row {
@@ -123,6 +123,29 @@
 }
 .announcements-page .views-field-field-image img[src$=".svg"]:hover {
     filter: brightness(1);
+}
+/*Exposed filter and description fix*/
+.announcements-page .views-exposed-widgets {
+    position: relative;
+}
+.announcements-page .views-exposed-form .views-exposed-widget .description {
+    position: absolute;
+    bottom: -50px;
+}
+.announcements-page .views-exposed-form .views-exposed-widget {
+    float: none;
+    padding: 0;
+    display: inline-block;
+}
+.announcements-page .views-exposed-form .views-exposed-widget label, .announcements-page  .views-exposed-form .views-exposed-widget .views-widget {
+    display: inline-block;
+    margin-right: 12px;
+}
+.announcements-page .views-exposed-widget.views-submit-button {
+    display: inline-block;
+}
+.announcements-page .views-exposed-widget.views-reset-button {
+    display: inline-block;
 }
 
 /*Announcements Admin View*/

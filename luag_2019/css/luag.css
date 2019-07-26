@@ -213,6 +213,9 @@ input[type="submit"] {
 .int-side-menu .menu-depth-4 a {
     padding-left: 50px;
 }
+.int-side-menu .menu-depth-5 a {
+    padding-left: 60px;
+}
 .int-side-menu a:hover:after {
     right: -14px;
 }
@@ -489,13 +492,13 @@ input[type="submit"] {
     border-bottom: none;
     box-shadow: none;
 }
-.related-content-block .views-row .views-field-field-image {
+.related-content-block .views-row .views-field-field-primary-image, .related-content-block .views-row .views-field-field-image {
     margin-right: 20px;
 }
 .related-content-block .views-row .right-side-info {
     flex: 1 0 300px;
 }
-.related-content-block .views-field-field-image .field-content a {
+.related-content-block .views-field-field-primary-image .field-content a, .related-content-block .views-field-field-image .field-content a {
     display: block;
     margin-bottom: 12px;
     width: 140px;
@@ -504,7 +507,7 @@ input[type="submit"] {
 .related-content-block .views-row .right-side-info p {
     margin: 0;
 }
-.related-content-block .views-field-field-image img {
+.related-content-block .views-field-field-primary-image img, .related-content-block .views-field-field-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -520,7 +523,7 @@ input[type="submit"] {
     color: #502d0e;
     margin: 0;
 }
-.related-content-block .views-field-field-related-content h2 a {
+.related-content-block .views-field-field-related-exhibitions h2 a, .related-content-block .views-field-field-related-content h2 a {
     background: none;
     transition: .15s;
 }

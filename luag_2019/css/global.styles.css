@@ -49,7 +49,7 @@
     --menu-low-opacity: #47597433;
     --main-font: #333;
     --lehigh-brown: #502d0e;
-    --link: #ff9900;
+    --link: #888;
     --link-light: #c0d2ec;
     --font-fam: Helvetica, Arial, Sans-serif;
     --font-fam-2: Helvetica, Arial, Sans-serif;
@@ -172,18 +172,20 @@ a:hover {
 .block-content a,
 .node-content a {
     transition: all .2s, background-position 0.25s cubic-bezier(.33,.66,.66,1);
-    background-image: linear-gradient(to bottom, #8eca68 0%, #8eca68 100%);
+    background-image: linear-gradient(to bottom, #aad78e 0%, #aad78e 100%);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: 0 1.05em;
     overflow: hidden;
     position: relative;
-    color: inherit;
+    color: #333;
 }
 .block-content a:hover,
-.node-content a:hover {
+.node-content a:hover,
+table a:hover {
     cursor: pointer;
     background-position: 0 0em;
+    color: #333;
 }
 a img {
     backface-visibility: hidden;
