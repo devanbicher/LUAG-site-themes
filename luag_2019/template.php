@@ -171,7 +171,7 @@ function luag_header_images($luag_vars){
     
     //we will start with the simple 'html' way of displaying the image, then move to the drupal-y way of doing things.
     
-    $head_string = '<div id="internal-hero-img"><img src="/files/luagdev/'.$head_image.'"></div>';
+    $head_string = '<div id="internal-hero-img"><img src="/files/luag/'.$head_image.'"></div>';
 
     
 

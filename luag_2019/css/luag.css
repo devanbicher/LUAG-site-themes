@@ -16,11 +16,18 @@ input[type="submit"] {
     border: 1px solid #ccc;
 }
 
-#block-block-4 {
+/*#block-block-4 { */
+.top-left-logo {
     display: flex;
     margin-left: 6px;
 }
+
+/* original style: 
 #block-block-4 .block-content {
+new style with block class but without new text format
+.top-left-logo .block-content {
+*/
+.top-left-logo .block-content a {
     display: flex;
     height: 100%;
     align-items: center;
@@ -87,7 +94,8 @@ input[type="submit"] {
     #luag-ag {
 	font-size: 25px;
     }
-    #block-block-4 {
+    /*#block-block-4 {*/
+    .top-left-logo
 	height: 58px;
     }
 }
