@@ -95,7 +95,7 @@ new style with block class but without new text format
 	font-size: 25px;
     }
     /*#block-block-4 {*/
-    .top-left-logo
+    .top-left-logo{
 	height: 58px;
     }
 }
