@@ -500,11 +500,9 @@ new style with block class but without new text format
     border-bottom: none;
     box-shadow: none;
 }
-.related-content-block .views-row .views-field-field-primary-image, .related-content-block .views-row .views-field-field-image {
-    margin-right: 20px;
-}
 .related-content-block .views-row .right-side-info {
     flex: 1 0 300px;
+    margin-left:20px;
 }
 .related-content-block .views-field-field-primary-image .field-content a, .related-content-block .views-field-field-image .field-content a {
     display: block;
@@ -521,7 +519,8 @@ new style with block class but without new text format
     object-fit: cover;
     background: #ccc;
 }
-.related-content-block .views-field-field-type {
+.related-content-block .views-field-field-type,
+.related-content-block .views-field-field-video-categories{
     color: #72be44;
     font-size: 12px;
     text-transform: uppercase;
@@ -531,11 +530,13 @@ new style with block class but without new text format
     color: #502d0e;
     margin: 0;
 }
-.related-content-block .views-field-field-related-exhibitions h2 a, .related-content-block .views-field-field-related-content h2 a {
+.related-content-block .views-field-field-related-exhibitions h2 a, .related-content-block .views-field-field-related-content h2 a,
+.related-content-block .views-field-title h2 a {
     background: none;
     transition: .15s;
 }
-.related-content-block .views-field-field-related-content h2 a:hover {
+.related-content-block .views-field-field-related-exhibitions h2 a:hover, .related-content-block .views-field-field-related-content h2 a:hover,
+.related-content-block .views-field-title h2 a:hover{
     color: #72be44;
 }
 
