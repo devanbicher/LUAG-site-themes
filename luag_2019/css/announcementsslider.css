@@ -122,6 +122,10 @@
     font-weight: 600;
     line-height: 1.2em;
 }
+.front-announcements-slider .views-field-title .Alert{
+    color: #e65a4f;
+}
+
 .front-announcements-slider .announcement-type {
     color: #71be44;
     font-size: 12px;

@@ -118,3 +118,6 @@
     color: #502d0e;
     letter-spacing: 2px;
 }
+.directors-message a.views-more-link{
+    background-position:0 .95em;
+}

@@ -516,6 +516,9 @@ a#title-a {
 #block-block-3 {
     flex-basis: 200px;
 }
+.footer-contact-block a{
+    color:white;
+}
 
 
 /* =============================================================================
