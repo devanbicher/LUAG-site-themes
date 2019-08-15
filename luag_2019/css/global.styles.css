@@ -222,6 +222,7 @@ pre, code, tt, samp, kbd, var {
 #lehigh-logo {
     display: inline-block;
     margin-left: 0;
+    position: relative;
 }
 #lehigh-logo a {
     display: flex;

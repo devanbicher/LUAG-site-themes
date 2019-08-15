@@ -59,7 +59,27 @@ new style with block class but without new text format
 #luag-logo {
     color: white;
 }
+#header #lehigh-logo a:hover:after,
+#luag-logo-wrap:hover:after {
+    width: 100%;
+}
+#header #lehigh-logo a:after,
+#luag-logo-wrap:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid white;
+    transition: 0.25s;
+}
+#luag-logo-svg img:hover {
+    filter: brightness(1);
+}
 
+#luag-logo-wrap:hover img {
+    filter: brightness(0.8);
+}
 
 #block-block-5 {
     line-height: 0;
