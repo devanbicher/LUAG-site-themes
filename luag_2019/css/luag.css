@@ -141,6 +141,7 @@ new style with block class but without new text format
     bottom: 5%;
     left: 12vw;
     color: white;
+    max-width: 80vw;
 }
 
 #internal-hero-img img {
