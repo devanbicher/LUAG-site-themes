@@ -421,6 +421,7 @@ a#title-a {
     overflow: auto;
     overflow-y: hidden;
     padding: 0 10vw;
+    padding-bottom: 25px;
 }
 .content-inner, .region.sidebar {
     padding: 2vh 2vw;

@@ -221,11 +221,11 @@ new style with block class but without new text format
     display: block;
     position: relative;
     border-bottom: 1px solid #ccc;
-    padding: 20px 0 20px 16px;
+    padding: 20px 10px 20px 16px;
 }
 
 .int-side-menu a.active {
-    color: #72be44;
+    color: var(--accent);
 }
 .int-side-menu a:after {
     content: "›";
@@ -300,7 +300,7 @@ new style with block class but without new text format
     margin: 0;
 }
 .exhibition-header .exhibition-date {
-    color: #72be44;
+    color: var(--accent);
     font-size: 28px;
     margin-bottom: 20px;
 }
@@ -361,30 +361,37 @@ new style with block class but without new text format
     background: white;
     padding: 50px 12vw;
 }
+.videos-slider .slick--skin--boxed-carousel .slide__content:hover,
 .exhibition-slider .slick--skin--boxed-carousel .slide__content:hover {
     box-shadow: none;
     border: none;
 }
+.videos-slider .slick--skin--boxed-carousel .slide__content,
 .exhibition-slider .slick--skin--boxed-carousel .slide__content {
     border-radius: 0;
     border: none;
 }
+.videos-slider #thumbnail-guide,
 .exhibition-slider #thumbnail-guide {
     font-size: 16px;
     color: #808080;
 }
+.videos-slider .video-slider-wrap,
 .exhibition-slider .exhibition-slider-wrap {
     display: flex;
     flex-wrap: wrap;
 }
+.videos-slider .video-slider-wrap .view-header,
 .exhibition-slider .exhibition-slider-wrap .view-header {
     flex: 1 0 200px;
     padding-right: 40px;
 }
+.videos-slider .video-slider-wrap .view-content,
 .exhibition-slider .exhibition-slider-wrap .view-content {
     flex: 1 0 75%;
     min-width: 0; /*Hello there, strangest fix in the world*/
 }
+.videos-slider .slick-slide img,
 .exhibition-slider .slick-slide img {
     width: 100%;
     height: 210px;
@@ -401,12 +408,15 @@ new style with block class but without new text format
     z-index: 4;
     opacity: 0;
 }
+.videos-slider .slick-slide,
 .exhibition-slider .slick-slide {
     margin: 10px;
 }
+.videos-slider .slick--skin--boxed > .slick__slider > .slick-list,
 .exhibition-slider .slick--skin--boxed > .slick__slider > .slick-list {
     margin: -10px;
 }
+.videos-slider .slick--skin--boxed-carousel .slide__content,
 .exhibition-slider .slick--skin--boxed-carousel .slide__content {
     margin: 0;
 }
@@ -464,7 +474,7 @@ new style with block class but without new text format
 .exhibition-slider .slide:hover .exhibitions-hover-info:before {
     width: 90%;
     height: 90%;
-    border-color: #72be44;
+    border-color: var(--accent);
     transition: all .25s, border-color .1s;
     transition-delay: .2s;
 }
@@ -542,7 +552,7 @@ new style with block class but without new text format
 }
 .related-content-block .views-field-field-type,
 .related-content-block .views-field-field-video-categories{
-    color: #72be44;
+    color: var(--accent);
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 600;
@@ -558,7 +568,7 @@ new style with block class but without new text format
 }
 .related-content-block .views-field-field-related-exhibitions h2 a:hover, .related-content-block .views-field-field-related-content h2 a:hover,
 .related-content-block .views-field-title h2 a:hover{
-    color: #72be44;
+    color: var(--accent);
 }
 
 /*Current Exhibitions Sidebar*/
@@ -610,7 +620,7 @@ new style with block class but without new text format
     transition: .15s;
 }
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .views-field-title a:hover {
-    color: #72be44;
+    color: var(--accent);
 }
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .views-field-field-exhibition-dates {
     font-size: 12px;
@@ -625,14 +635,217 @@ new style with block class but without new text format
     padding-bottom: 20px;
     margin-bottom: 50px;
 }
+/**********Exhibitions aggregate page*********/
+.exhibitions-aggregate-block {
+    background-color: #f2f2f2;
+}
+.exhibitions-aggregate-block .views-field-field-link .field-content {
+    display: flex;
+    align-items: center;
+}
+.exhibitions-aggregate-block .views-field-field-link {
+    font-weight: 200;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.exhibitions-aggregate-block .views-field-field-link img {
+    width: 20px;
+    margin-right: 10px;
+    margin-left: 0;
+}
+/*wrapper for all visible fields*/
+.exhibitions-aggregate-block .exhibitions-aggregate-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    min-height: 300px;
+}
+.exhibitions-aggregate-block .views-row:nth-child(2n) .exhibitions-aggregate-content {
+    flex-direction: row-reverse;
+}
+.exhibitions-aggregate-block .views-row {
+    position: relative;
+}
+.exhibitions-aggregate-block .views-field-nid a {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-image: none;
+    width: 100%;
+    height: 100%;
+}
+.exhibitions-aggregate-block .views-field-nid a:before {
+    content:'';
+    transition-delay: .2s;
+    box-sizing: border-box;
+    position:absolute;
+    top: 0%;
+    right: 0%;
+    height: 0;
+    width:0;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    box-sizing: border-box;
+    transition: all .25s, border-color .5s;
+    margin: 20px 1.5%;
+}
+.exhibitions-aggregate-block .views-field-nid a:after {
+    content:'';
+    transition-delay: .2s;
+    box-sizing: border-box;
+    position:absolute;
+    left:0;
+    bottom:0;
+    width: 0;
+    height: 0;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    transition: all .25s, border-color .5s;
+    margin: 20px 1.5%;
+}
+.exhibitions-aggregate-block .views-row:hover .views-field-nid a:after,
+.exhibitions-aggregate-block .views-row:hover .views-field-nid a:before {
+    width: 97%;
+    height: calc(100% - 40px);
+    border-color: var(--accent);
+    transition: all .25s, border-color .1s;
+    transition-delay: .2s;
+}
+
+.exhibitions-aggregate-block .views-row:hover .views-field-field-primary-image img {
+    filter: brightness(0.5);
+}
+
+.exhibitions-aggregate-block .exhibitions-aggregate-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1 0 300px;
+    padding: calc(3% + 10px) calc(3vw + 5px);
+}
+.exhibitions-aggregate-block .views-field-title {
+    flex: .8 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.exhibitions-aggregate-block .views-field-title h2 {
+    line-height: 1.2em;
+}
+.exhibitions-aggregate-block .views-field-title:after {
+    content: '';
+    display: block;
+    margin-bottom: 15px;
+    width: 60px;
+    background: #333;
+    height: 2px;
+}
+.exhibitions-aggregate-block .views-field-title .field-content {
+    margin-bottom: 20px;
+}
+.exhibitions-aggregate-block .views-field-field-exhibition-dates {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #808080;
+}
+
+/*Alternating Images*/
+.exhibitions-aggregate-block .views-field-field-primary-image {
+    position: relative;
+    display: flex;
+    z-index: 0;
+    flex: 1 0 60%;
+    line-height: 0;
+    max-height: 420px;
+}
+.exhibitions-aggregate-block .views-field-field-primary-image .field-content {
+    height: 100%;
+    line-height: 0;
+}
+.exhibitions-aggregate-block .views-field-field-primary-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .4s;
+}
+
+/*Rest of vidoes slider styles*/
+.videos-slider .view-header h2 {
+    font-size: 30px;
+    color: #502d0e;
+    text-transform: uppercase;
+}
+.videos-slider .view-header #video-text {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+.videos-slider .view-header {
+    margin-bottom: 20px;
+}
+.videos-slider .video-slider-wrap .view-header {
+    padding-right: 80px;
+}
+.videos-slider .video-slider-wrap {
+    align-items: center;
+}
+
+.videos-slider {
+    padding: 50px 12vw;
+    background: #f2f2f2;
+}
+.videos-slider .slide__content {
+    background: none;
+}
+.videos-slider .slick-arrow {
+    border: 0;
+    border-radius: 0;
+    display: block;
+    font-size: 0;
+    width: 30px;
+    height: 80px;
+    pointer-events: auto;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-70%);
+    background: rgba(255, 255, 255, .95);
+    cursor: pointer;
+}
+.videos-slider .nav.slick__arrow {
+    top: 55%;
+}
+.videos-slider .slick-arrow::before {
+    font-size: 66px;
+    top: 47%;
+}
+.videos-slider .slick-prev {
+    left: -18px;
+    box-shadow: 3px 4px 10px -2px black;
+}
+.videos-slider .slick-next {
+    right: -18px;
+    box-shadow: -3px 4px 10px -2px rgba(0, 0, 0, 0.65);
+}
+.videos-slider .views-field-title a {
+    font-weight: 600;
+    background: none;
+}
+.videos-slider .slick-slide img {
+    margin-bottom: 10px;
+}
 
 /*** videos view placeholder ***/
 .view-id-videos .views-row{
     margin-top: 60px;
 }
     
-
-
 
 /*Front page*/
 .front #columns {
