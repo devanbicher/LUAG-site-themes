@@ -117,7 +117,7 @@
    margin: -10px 10px;
 }
 .spotlight-double-slider .slide__caption {
-    padding-top: 0 0 10px 0;
+        padding-bottom: 0;
 }
 
 .spotlight-double-slider h2.block-title {
