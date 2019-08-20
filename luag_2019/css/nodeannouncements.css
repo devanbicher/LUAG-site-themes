@@ -69,9 +69,7 @@
     font-weight: 600;
     letter-spacing: 2px;
 }
-.node-type-video .views-field-field-type .field-content,
-.node-type-video .views-field-field-video-categories .field-content,
-.node-type-announcement .views-field-field-type .field-content {
+.view-announcements-page-content .views-field-field-type .field-content {
     font-size: 16px;
 }
 .announcements-sidebar .views-field-field-additional-info .field-content {
