@@ -9,3 +9,7 @@ $(document).ready(function() {
     $('a:has(*)').css('background-image','none');
     $('a:has(> strong)').css('background-image','linear-gradient(to bottom, var(--link-light) 0%, var(--link-light) 100%)');
 });
+$(document).ajaxStop(function() {
+    $('a:has(*)').css('background-image','none');
+    $('a:has(> strong)').css('background-image','linear-gradient(to bottom, var(--link-light) 0%, var(--link-light) 100%)');
+});

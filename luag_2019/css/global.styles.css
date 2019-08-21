@@ -93,10 +93,13 @@ p {
     line-height: 2em;
 }
 h1#page-title {
-    font-size: calc(24px + 1.5vw)
+    color: #502d0e;
+    margin-top: 3vw;
+    font-size: 48px;
 }
 h1 {
     font-size: 28px;
+    line-height: 1.2em;
 }
 h2 {
     font-size: 24px;
@@ -695,8 +698,7 @@ ul.links li {
  * ========================================================================== */
 ul.pager {
     clear: both;
-    margin: 0;
-    margin-bottom: 25px;
+    margin: 25px 0;
     text-align: center;
 }
 .item-list ul.pager li {
@@ -718,11 +720,11 @@ ul.pager li a:hover {
     background-color: var(--menu-low-opacity);
 }
 ul.pager li.pager-current {
-    background-color: var(--main);
     display: inline-block;
-    color: var(--complement);
-    padding: 8px 16px;
+    padding: 7px 15px;
     text-decoration: none;
+    border: 1px solid var(--accent);
+    font-weight: 300;
 }
 ul.pager li.pager-first a,
 ul.pager li.pager-previous a,
