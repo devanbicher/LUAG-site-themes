@@ -781,10 +781,11 @@ new style with block class but without new text format
 }
 .exhibitions-aggregate-block.past-exhibitions-block .views-row {
     margin-bottom: 100px;
-    transition: 0.8s;
+    transition: 0.8s 0s;
 }
 .exhibitions-aggregate-block.past-exhibitions-block .views-row:hover {
-    box-shadow: 0 6px 10px -2px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.35);
+    transition: 0.8s .4s;
 }
 .exhibitions-aggregate-block.past-exhibitions-block .exhibitions-aggregate-info {
     flex: 1 0 50%;
@@ -951,10 +952,20 @@ new style with block class but without new text format
 	margin-top: calc(4vw + 177px);    
     }
 }
+.page-videos .video-aggregate .view-content:after {
+    content: '';
+    flex: 1 230px;
+    /* max-width: 460px; */
+}
+@media only screen and (min-width: 1903px) {
+    .page-videos .video-aggregate .view-content:after {
+	flex: 1000;
+    }
+}
 .page-videos .video-aggregate .view-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin: 20px -6px 0 -6px;
 }
 .page-videos .video-aggregate .views-row {
@@ -964,12 +975,12 @@ new style with block class but without new text format
 }
 @media only screen and (min-width: 600px) {
     .page-videos .video-aggregate .views-row {
-	max-width: 300px;
+	/* max-width: 230px; */
     }
 }
 .page-videos .video-aggregate .views-row .views-field-field-video-thumbnail img {
     width: 100%;
-    height: 160px;
+    height: 150px;
     object-fit: cover;
 }
 .page-videos .video-aggregate .views-row .views-field-field-video-categories {
@@ -982,6 +993,9 @@ new style with block class but without new text format
     background: none;
     font-weight: 600;
     line-height: 1.2em;
+}
+@media only screen and (min-width: 600px) {
+
 }
 
 

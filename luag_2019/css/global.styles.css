@@ -715,6 +715,8 @@ ul .pager-item a {
     color: var(--main);
     padding: 8px 16px;
     text-decoration: none;
+    background-image: none;
+    overflow: visible;
 }
 ul.pager li a:hover {
     background-color: var(--menu-low-opacity);
@@ -734,6 +736,8 @@ ul.pager li.pager-next a{
     color: var(--main);
     padding: 8px 16px;
     text-decoration: none;
+    background-image: none;
+    overflow: visible;
 }
 .block ul.pager li {
     margin: 0;
