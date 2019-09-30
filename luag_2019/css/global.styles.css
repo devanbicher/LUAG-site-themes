@@ -67,17 +67,19 @@
     box-sizing: border-box;
 }
 html {
-  background: #fff;
+    background: #fff;
 }
-
+img {
+    -webkit-backface-visibility: hidden;
+}
 body {
-  font-family: Helvetica, Arial, Sans-serif;
-  font-family: var(--font-fam);
-  background: #ccc;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  color: #333;
-  color: var(--main-font);
+    font-family: Helvetica, Arial, Sans-serif;
+    font-family: var(--font-fam);
+    background: #ccc;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    color: #333;
+    color: var(--main-font);
 }
 
 /* =============================================================================
@@ -87,7 +89,7 @@ body {
 /****************************************/
 /*Default font sizes*/
 h1, h2, h3, h4, h5, h6, .node-content div, ol, ul {
-    line-height: 1.6em;
+    line-height: 1.2em;
 }
 p {
     line-height: 2em;
@@ -144,18 +146,17 @@ ol,
 /* Standout text that needs to be bigger and more prominent, i.e standout. but not an alert */
 .standout-text{
     font-weight: bold !important;
-    color: #296A8E !important;
+    color: var(--accent)!important;
 }
 /* Alert text, usually red and bigger */
 .alert-text{
     font-weight: bold !important;
-    color: #BF3649 !important;
+    color: #e65a4f !important;
     text-decoration: underline !important;
 }
 /* This is for small note-taking text, like with an '*' */
 .annotation-text{
-    font-size: 14px !important;
-    font-size: calc(12px + .2vw) !important;
+    font-size: 12px !important;
 }
 /* =============================================================================
  *   Links

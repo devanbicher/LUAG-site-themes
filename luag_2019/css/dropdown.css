@@ -76,6 +76,7 @@ ul.nice-menu .menuparent ul li:hover a {
 ul.nice-menu .menuparent ul li {
     height: 76px;
     background-image: none;
+    width: calc(100px + 8vw);
 }
 
 /******************************

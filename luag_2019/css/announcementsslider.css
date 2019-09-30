@@ -122,8 +122,12 @@
     font-weight: 600;
     line-height: 1.2em;
 }
-.front-announcements-slider .views-field-title .Alert{
+.front-announcements-slider .Alert .views-field-title {
     color: #e65a4f;
+}
+.front-announcements-slider .slide:hover .content-image-and-info.Alert:after,
+.front-announcements-slider .slide:hover .content-image-and-info.Alert:before {
+    border-color: #e65a4f;
 }
 
 .front-announcements-slider .announcement-type {
@@ -135,6 +139,9 @@
     letter-spacing: 1.5px;
     margin-bottom: 4px;
 }
+.front-announcements-slider .Alert .announcement-type {
+    color: #e65a4f;
+}
 .front-announcements-slider .views-field-field-date {
     font-weight: 600;
     font-size: 12px;
@@ -142,7 +149,9 @@
     letter-spacing: 1px;
     color: #808080;
 }
-
+.front-announcements-slider .Alert .views-field-field-date {
+    color: #e65a4f;
+}
 .front-announcements-slider .views-field-field-date-1 {
     font-size: 12px;
     text-transform: uppercase;

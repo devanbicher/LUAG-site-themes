@@ -16,13 +16,43 @@ input[type="submit"] {
     border: 1px solid #ccc;
     padding: 2px 10px;
 }
+/*Footer webform*/
+/*Placeholders*/
+#footer .webform-client-form .form-item input {
+    background: #ccc;
+    height: 60px;
+    font-size: 24px;
+    width: 100%;
+}
 
+#footer .webform-client-form .form-item {
+    margin: 0 6px;
+}
+#footer .webform-client-form input[type="submit"] {
+    height: 40px;
+    margin: 0 6px;
+    font-size: 12px;
+    text-align: left;
+    background: #333 !important;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .2s;
+}
+#footer .webform-client-form input[type="submit"]:hover {
+    background: var(--accent) !important;
+    color: #333;
+}
 /*#block-block-4 { */
 .top-left-logo {
     display: flex;
     margin-left: 6px;
 }
-
+.top-left-logo .block-content p {
+    margin: 0.2em 0;
+}
 /* original style: 
 #block-block-4 .block-content {
 new style with block class but without new text format
@@ -81,11 +111,19 @@ new style with block class but without new text format
 #luag-logo-wrap:hover img {
     filter: brightness(0.8);
 }
-
+.hero-block,
 #block-block-5 {
     line-height: 0;
     position: relative;
+    height: 85vh;
 }
+.hero-block .slick-list {
+    margin: 0;
+}
+.hero-block .slick-slide {
+    margin: 0;
+}
+.hero-block:before,
 #block-block-5:before {
     content: '';
     box-shadow: inset 0px 160px 100px -100px rgba(0, 0, 0, 0.75);
@@ -96,7 +134,7 @@ new style with block class but without new text format
     left: 0;
     z-index: 1;
 }
-
+.front-hero img,
 #front-hero img {
     width: 100%;
     height: 85vh;
@@ -120,7 +158,10 @@ new style with block class but without new text format
 	height: 58px;
     }
 }
-
+/*Front Page Staging Area*/
+.page-node-125 #internal-hero {
+    display: none;
+}
 /*Internal hero images*/
 #internal-hero {
     position: relative;
@@ -184,7 +225,11 @@ new style with block class but without new text format
 }
 
 /*sidebar menu*/
-
+@media only screen and (max-width: 1023px) and (min-width: 769px) {
+    .region-sidebar-second .block {
+	float: none !important;
+    }
+}
 .int-side-menu h2.block-title {
     color: #502d0e;
     margin: 0;
@@ -200,7 +245,11 @@ new style with block class but without new text format
     margin-top: 4vw;
     border-bottom: none;
 }
-
+@media only screen and (max-width: 1023px) and (min-width: 769px) {
+    .node-type-announcement .region-sidebar-second .block {
+	float: none !important;
+    }
+}
 .int-side-menu ul {
     padding: 0;
     margin: 0;
@@ -214,8 +263,7 @@ new style with block class but without new text format
     list-style: none;
     margin: 0;
 }
-
-.int-side-menu a {
+.int-side-menu a:not(.contextual-links-trigger) {
     font-weight: 600;
     color: #502d0e;
     background-image: none;
@@ -512,6 +560,9 @@ new style with block class but without new text format
 }
 
 /*Related Content*/
+.related-content-block .views-field-field-related-exhibitions h2 {
+    margin: 0;
+}
 .related-content-block .block-title {
     font-size: 28px;
     color: #502d0e;
@@ -567,6 +618,7 @@ new style with block class but without new text format
 .related-content-block .views-field-title h2 a {
     background: none;
     transition: .15s;
+    color: #502d0e;
 }
 .related-content-block .views-field-field-related-exhibitions h2 a:hover, .related-content-block .views-field-field-related-content h2 a:hover,
 .related-content-block .views-field-title h2 a:hover{
@@ -627,9 +679,6 @@ new style with block class but without new text format
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .views-field-field-exhibition-dates {
     font-size: 12px;
 }
-
-/* Temporary styles added by Devan to make things presentable. */
-
 
 /*** exhibitions placeholder page. ***/
 .page-exhibitions .views-row{
@@ -985,6 +1034,7 @@ new style with block class but without new text format
 }
 .page-videos .video-aggregate .views-row .views-field-field-video-categories {
     color: var(--accent);
+    font-weight: 600;
     text-transform: uppercase;
     font-size: 12px;
     margin: 6px 0;
@@ -1002,4 +1052,9 @@ new style with block class but without new text format
 /*Front page*/
 .front #columns {
     padding: 50px 10vw;
+}
+
+/*Search page*/
+.page-search #page-title {
+    display: none;
 }

@@ -20,7 +20,6 @@
 .announcements-sidebar {
     background-color: #e0e0e0;
     padding: 5px 18px;
-    width: 315px;
 }
 .announcements-sidebar .block-title {
     display: block;
@@ -64,13 +63,13 @@
     padding: 0 0 15px;
     margin: 0 0 30px;
     border-bottom: 1px solid #CCC;
-    color: var(--accent);
+    color: #502d0e;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 2px;
 }
 .view-announcements-page-content .views-field-field-type .field-content {
-    font-size: 16px;
+    font-size: 14px;
 }
 .announcements-sidebar .views-field-field-additional-info .field-content {
     font-size: 14px;
@@ -81,6 +80,13 @@
     font-size: 18px;
     padding: 10px 0;
     display: inline;
+}
+.node-type-announcement .announcements-page-content .views-field-field-date .date-display-range,
+.node-type-announcement .announcements-page-content .views-field-field-date .date-display-single {
+    color: var(--accent);
+}
+.announcements-page-content .views-field.views-field-field-date {
+    margin-bottom: 20px;
 }
 .node-type-announcement .field-name-body {
     margin: 20px 0 0;
@@ -103,7 +109,8 @@
 .node-type-announcement .views-field-field-image img {
     width: 100%;
 }
-.node-type-announcement .views-field-field-primary-image img:not([src$=".svg"]), .node-type-announcement .views-field-field-image img:not([src$=".svg"]) {
+.node-type-announcement .announcements-page-content .views-field-field-primary-image img:not([src$=".svg"]),
+.node-type-announcement .announcements-page-content .views-field-field-image img:not([src$=".svg"]) {
     width: 100%;
     max-height: 500px;
     object-fit: contain;
@@ -114,6 +121,53 @@
     padding: 30px;
 }
 
-.node-type-announcement .views-field-title {
-    color: #6a6962;
+.node-type-announcement .announcements-page-content .views-field-title {
+    color: #502d0e;
+}
+
+/*LUAG Specific*/
+.announcements-page-content {
+    margin-top: 50px;
+}
+.announcements-page-content .views-field.views-field-field-location {
+    height: calc(45% + 1vw);
+    font-weight: 200;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.announcements-page-content .views-field.views-field-field-location .field-content {
+    display: flex;
+    align-items: center;
+}
+.announcements-page-content .views-field.views-field-field-location .field-content img {
+    width: 12px;
+    margin-right: 4px;
+    margin-left: 0;
+}
+
+.announcements-page-content .views-field-field-additional-dates .views-label-field-additional-dates {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent);
+}
+.announcements-page-content .views-field-field-additional-dates .field-content {
+    margin-top: 4px;
+}
+.announcements-page-content .views-field-field-additional-dates {
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+.announcements-page-content .views-field-field-additional-dates .field-content > span {
+    display: block;
+}
+.announcements-page-content .views-field-field-additional-dates .field-content li {
+    color: #808080;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+.announcements-page-content .views-field-field-additional-dates .field-content li span {
+    font-size: 16px;
 }

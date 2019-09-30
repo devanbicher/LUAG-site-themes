@@ -19,11 +19,13 @@
   stylesheets[screen][] = css/luag.css
   stylesheets[screen][] = css/dropdown.css
   stylesheets[screen][] = css/hero.css
+  stylesheets[screen][] = css/learn.css
   stylesheets[screen][] = css/nodeannouncements.css
   stylesheets[screen][] = css/announcementsview.css
   stylesheets[screen][] = css/exhibitionslider.css
   stylesheets[screen][] = css/announcementsslider.css
   stylesheets[screen][] = css/doubleslider.css
+  stylesheets[screen][] = css/webforms.css
 
   ; Print - uncomment to load basic print styles.
   ; stylesheets[print][] = css/print.css
@@ -82,6 +84,7 @@
   ; ie_scripts[lte IE 8][] = scripts/my-script.js
   scripts[] = scripts/postload.js
   scripts[] = scripts/exHours.js
+  scripts[] = scripts/learnAcc.js
 
 ;----------// Regions
 
