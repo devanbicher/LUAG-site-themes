@@ -149,6 +149,13 @@
     letter-spacing: 1px;
     color: #808080;
 }
+.front-announcements-slider .views-field-field-additional-dates {
+    color: var(--accent);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
 .front-announcements-slider .Alert .views-field-field-date {
     color: #e65a4f;
 }

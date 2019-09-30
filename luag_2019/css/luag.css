@@ -115,7 +115,7 @@ new style with block class but without new text format
 #block-block-5 {
     line-height: 0;
     position: relative;
-    height: 85vh;
+    height: calc(70vh + 200px);
 }
 .hero-block .slick-list {
     margin: 0;
@@ -137,7 +137,7 @@ new style with block class but without new text format
 .front-hero img,
 #front-hero img {
     width: 100%;
-    height: 85vh;
+    height: calc(70vh + 200px);
     object-position: 50% 80%;
     object-fit: cover;
     filter: brightness(0.60);
