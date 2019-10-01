@@ -14,7 +14,7 @@
   ; See each stylesheet for extensive documentation and help.
   stylesheets[screen][] = css/global.base.css
   stylesheets[screen][] = css/global.styles.css
-  stylesheets[screen][] = css/cards.css
+  stylesheets[screen][] = css/profiles-grid.css
   stylesheets[screen][] = css/profiles.css
   stylesheets[screen][] = css/luag.css
   stylesheets[screen][] = css/dropdown.css

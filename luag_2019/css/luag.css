@@ -1,11 +1,11 @@
 /* this is the new default css file for new sites. */
-
 /*Get rid of old clearfix hack. Use display inline-block, flex, table, or set
   overflow: hidden; on the parent element if a float issue comes up. It shouldn't because
   float is 99.9% unneccesary */
 .clearfix:after {
     content: none;
 }
+
 select {
     background: transparent;
 }
@@ -16,6 +16,7 @@ input[type="submit"] {
     border: 1px solid #ccc;
     padding: 2px 10px;
 }
+
 /*Footer webform*/
 /*Placeholders*/
 #footer .webform-client-form .form-item input {
@@ -28,6 +29,7 @@ input[type="submit"] {
 #footer .webform-client-form .form-item {
     margin: 0 6px;
 }
+
 #footer .webform-client-form input[type="submit"] {
     height: 40px;
     margin: 0 6px;
@@ -41,18 +43,22 @@ input[type="submit"] {
     letter-spacing: 1px;
     transition: .2s;
 }
+
 #footer .webform-client-form input[type="submit"]:hover {
     background: var(--accent) !important;
     color: #333;
 }
+
 /*#block-block-4 { */
 .top-left-logo {
     display: flex;
     margin-left: 6px;
 }
+
 .top-left-logo .block-content p {
     margin: 0.2em 0;
 }
+
 /* original style: 
 #block-block-4 .block-content {
 new style with block class but without new text format
@@ -68,6 +74,7 @@ new style with block class but without new text format
     width: 50px;
     line-height: 0;
 }
+
 #luag-ag {
     font-weight: bold;
     font-size: 33px;
@@ -90,12 +97,12 @@ new style with block class but without new text format
 #luag-logo {
     color: white;
 }
-#header #lehigh-logo a:hover:after,
-#luag-logo-wrap:hover:after {
+
+#header #lehigh-logo a:hover:after, #luag-logo-wrap:hover:after {
     width: 100%;
 }
-#header #lehigh-logo a:after,
-#luag-logo-wrap:after {
+
+#header #lehigh-logo a:after, #luag-logo-wrap:after {
     content: '';
     position: absolute;
     width: 0;
@@ -104,6 +111,7 @@ new style with block class but without new text format
     border-bottom: 1px solid white;
     transition: 0.25s;
 }
+
 #luag-logo-svg img:hover {
     filter: brightness(1);
 }
@@ -111,20 +119,22 @@ new style with block class but without new text format
 #luag-logo-wrap:hover img {
     filter: brightness(0.8);
 }
-.hero-block,
-#block-block-5 {
+
+.hero-block, #block-block-5 {
     line-height: 0;
     position: relative;
     height: calc(70vh + 200px);
 }
+
 .hero-block .slick-list {
     margin: 0;
 }
+
 .hero-block .slick-slide {
     margin: 0;
 }
-.hero-block:before,
-#block-block-5:before {
+
+.hero-block:before, #block-block-5:before {
     content: '';
     box-shadow: inset 0px 160px 100px -100px rgba(0, 0, 0, 0.75);
     position: absolute;
@@ -134,8 +144,8 @@ new style with block class but without new text format
     left: 0;
     z-index: 1;
 }
-.front-hero img,
-#front-hero img {
+
+.front-hero img, #front-hero img {
     width: 100%;
     height: calc(70vh + 200px);
     object-position: 50% 80%;
@@ -145,28 +155,34 @@ new style with block class but without new text format
 
 @media only screen and (max-width: 1024px) {
     #luag-logo-svg img {
-	width: 40px;
+        width: 40px;
     }
+
     #luag-lu {
-	font-size: 17px;
+        font-size: 17px;
     }
+
     #luag-ag {
-	font-size: 25px;
+        font-size: 25px;
     }
+
     /*#block-block-4 {*/
-    .top-left-logo{
-	height: 58px;
+    .top-left-logo {
+        height: 58px;
     }
 }
+
 /*Front Page Staging Area*/
 .page-node-125 #internal-hero {
     display: none;
 }
+
 /*Internal hero images*/
 #internal-hero {
     position: relative;
     line-height: 0;
 }
+
 #internal-hero-img:before {
     content: '';
     box-shadow: inset 0px 160px 100px -100px rgba(0, 0, 0, 0.75), inset 1px -120px 136px -100px rgba(0, 0, 0, 0.5);
@@ -177,6 +193,7 @@ new style with block class but without new text format
     left: 0;
     z-index: 1;
 }
+
 #internal-hero-text {
     position: absolute;
     z-index: 2;
@@ -209,15 +226,16 @@ new style with block class but without new text format
     font-size: 14px;
     cursor: default;
 }
+
 .breadcrumb a {
     color: white;
 }
+
 .delimiter {
     margin: 0 10px;
 }
 
 /*Internal pages*/
-
 .not-front.node-type-page #page-title {
     color: #502d0e;
     margin-top: 3vw;
@@ -227,9 +245,10 @@ new style with block class but without new text format
 /*sidebar menu*/
 @media only screen and (max-width: 1023px) and (min-width: 769px) {
     .region-sidebar-second .block {
-	float: none !important;
+        float: none !important;
     }
 }
+
 .int-side-menu h2.block-title {
     color: #502d0e;
     margin: 0;
@@ -245,16 +264,17 @@ new style with block class but without new text format
     margin-top: 4vw;
     border-bottom: none;
 }
+
 @media only screen and (max-width: 1023px) and (min-width: 769px) {
     .node-type-announcement .region-sidebar-second .block {
-	float: none !important;
+        float: none !important;
     }
 }
+
 .int-side-menu ul {
     padding: 0;
     margin: 0;
 }
-
 
 /* .int-side-menu .menu-block-wrapper > ul > li { */
 /*     border-bottom: 1px solid #ccc; */
@@ -263,6 +283,7 @@ new style with block class but without new text format
     list-style: none;
     margin: 0;
 }
+
 .int-side-menu a:not(.contextual-links-trigger) {
     font-weight: 600;
     color: #502d0e;
@@ -276,70 +297,80 @@ new style with block class but without new text format
 .int-side-menu a.active {
     color: var(--accent);
 }
+
 .int-side-menu a:after {
     content: "›";
     position: relative;
     right: -10px;
     transition-duration: 0.15s;
 }
+
 .int-side-menu .menu-depth-2 a {
     padding-left: 30px;
 }
+
 .int-side-menu .menu-depth-3 a {
     padding-left: 40px;
 }
+
 .int-side-menu .menu-depth-4 a {
     padding-left: 50px;
 }
+
 .int-side-menu .menu-depth-5 a {
     padding-left: 60px;
 }
+
 .int-side-menu a:hover:after {
     right: -14px;
 }
 
-
 /***********************************/
 /*           Exhibitions           */
 /***********************************/
-
 /*hero*/
 /***********************************/
 .exhibition-hero {
     line-height: 0;
 }
+
 .exhibition-hero .views-field-field-primary-image img {
-  width: 100%;
-  height: 75vh;
-  object-fit: cover;
-  object-position: 50% 30%;
-  filter: brightness(0.9) saturate(0.9);
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    object-position: 50% 30%;
+    filter: brightness(0.9) saturate(0.9);
 }
+
 .exhibition-hero .views-field-field-primary-image:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  box-shadow: inset 0px 200px 100px -100px rgba(0, 0, 0, 0.4);
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    box-shadow: inset 0px 200px 100px -100px rgba(0, 0, 0, 0.4);
 }
+
 .exhibition-hero .views-field-field-primary-image {
-  position: relative;
+    position: relative;
 }
+
 /*header info*/
 /***********************************/
 .exhibition-header {
     padding: 0 12vw;
     background-color: white;
 }
+
 .exhibition-header .block-inner {
     border-bottom: 1px solid #502d0e;
     z-index: 2;
     box-shadow: 0 1px 0px #e0e0e0;
     position: relative;
-} 
+}
+
 .exhibition-header .title {
     font-size: calc(28px + 1.2vw);
     color: #502d0e;
@@ -348,19 +379,23 @@ new style with block class but without new text format
     padding-bottom: 10px;
     margin: 0;
 }
+
 .exhibition-header .exhibition-date {
     color: var(--accent);
     font-size: 28px;
     margin-bottom: 20px;
 }
+
 .exhibition-location {
     display: flex;
     align-items: center;
 }
+
 .exhibition-location img {
     width: 14px;
     margin-right: 8px;
 }
+
 .exhibition-location a {
     background: none;
     text-transform: uppercase;
@@ -380,12 +415,14 @@ new style with block class but without new text format
     max-height: 0;
     letter-spacing: 1px;
 }
+
 .exhibition-header .gallery-toggle-wrap {
     display: inline-flex;
     align-items: center;
     padding: 16px 0 10px 0;
     cursor: pointer;
 }
+
 .exhibition-header #gallery-hours-click {
     color: #808080;
     text-transform: uppercase;
@@ -393,10 +430,12 @@ new style with block class but without new text format
     font-size: 16px;
     font-weight: 300;
 }
+
 .exhibition-header #gallery-hours-arrow img {
     width: 10px;
     filter: brightness(0.6);
 }
+
 .exhibition-header #gallery-hours-arrow {
     transform: scaleY(1);
     margin-right: 10px;
@@ -410,46 +449,49 @@ new style with block class but without new text format
     background: white;
     padding: 50px 12vw;
 }
-.videos-slider .slick--skin--boxed-carousel .slide__content:hover,
-.exhibition-slider .slick--skin--boxed-carousel .slide__content:hover {
+
+.videos-slider .slick--skin--boxed-carousel .slide__content:hover, .exhibition-slider .slick--skin--boxed-carousel .slide__content:hover {
     box-shadow: none;
     border: none;
 }
-.videos-slider .slick--skin--boxed-carousel .slide__content,
-.exhibition-slider .slick--skin--boxed-carousel .slide__content {
+
+.videos-slider .slick--skin--boxed-carousel .slide__content, .exhibition-slider .slick--skin--boxed-carousel .slide__content {
     border-radius: 0;
     border: none;
 }
-.videos-slider #thumbnail-guide,
-.exhibition-slider #thumbnail-guide {
+
+.videos-slider #thumbnail-guide, .exhibition-slider #thumbnail-guide {
     font-size: 16px;
     color: #808080;
 }
-.videos-slider .video-slider-wrap,
-.exhibition-slider .exhibition-slider-wrap {
+
+.videos-slider .video-slider-wrap, .exhibition-slider .exhibition-slider-wrap {
     display: flex;
     flex-wrap: wrap;
 }
-.videos-slider .video-slider-wrap .view-header,
-.exhibition-slider .exhibition-slider-wrap .view-header {
+
+.videos-slider .video-slider-wrap .view-header, .exhibition-slider .exhibition-slider-wrap .view-header {
     flex: 1 0 200px;
     padding-right: 40px;
 }
-.videos-slider .video-slider-wrap .view-content,
-.exhibition-slider .exhibition-slider-wrap .view-content {
+
+.videos-slider .video-slider-wrap .view-content, .exhibition-slider .exhibition-slider-wrap .view-content {
     flex: 1 0 75%;
-    min-width: 0; /*Hello there, strangest fix in the world*/
+    min-width: 0;
+    /*Hello there, strangest fix in the world*/
 }
-.videos-slider .slick-slide img,
-.exhibition-slider .slick-slide img {
+
+.videos-slider .slick-slide img, .exhibition-slider .slick-slide img {
     width: 100%;
     height: 210px;
     object-fit: cover;
     cursor: pointer;
 }
+
 .exhibition-slider * {
     cursor: default;
 }
+
 .exhibition-slider .views-field-field-selected-images-1 a {
     position: absolute;
     width: 100%;
@@ -457,18 +499,19 @@ new style with block class but without new text format
     z-index: 4;
     opacity: 0;
 }
-.videos-slider .slick-slide,
-.exhibition-slider .slick-slide {
+
+.videos-slider .slick-slide, .exhibition-slider .slick-slide {
     margin: 10px;
 }
-.videos-slider .slick--skin--boxed > .slick__slider > .slick-list,
-.exhibition-slider .slick--skin--boxed > .slick__slider > .slick-list {
+
+.videos-slider .slick--skin--boxed > .slick__slider > .slick-list, .exhibition-slider .slick--skin--boxed > .slick__slider > .slick-list {
     margin: -10px;
 }
-.videos-slider .slick--skin--boxed-carousel .slide__content,
-.exhibition-slider .slick--skin--boxed-carousel .slide__content {
+
+.videos-slider .slick--skin--boxed-carousel .slide__content, .exhibition-slider .slick--skin--boxed-carousel .slide__content {
     margin: 0;
 }
+
 .exhibition-slider .slick-arrow {
     border: 0;
     border-radius: 50%;
@@ -482,12 +525,15 @@ new style with block class but without new text format
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
+
 .exhibition-slider .slick-prev {
     left: -30px;
 }
+
 .exhibition-slider .slick-next {
     right: -30px;
 }
+
 .exhibitions-hover-info {
     position: absolute;
     top: 0;
@@ -502,53 +548,59 @@ new style with block class but without new text format
     transition: all .3s, background .5s;
     z-index: 1;
 }
+
 .exhibitions-hover-info .views-field {
     opacity: 0;
     transition: .5s;
 }
+
 .exhibition-slider .slide:hover .exhibitions-hover-info .views-field {
     opacity: 1;
     transition: .5s .15s;
 }
+
 .exhibition-slider .slide:hover .exhibitions-hover-info {
     background: rgba(30, 30, 30, 0.75);
 }
+
 .exhibitions-hover-info .views-field-field-file-image-title-text {
     font-size: 16px;
     font-weight: 600;
     font-style: italic;
 }
+
 /*Fancy hovers*/
-.exhibition-slider .slide:hover .exhibitions-hover-info:after,
-.exhibition-slider .slide:hover .exhibitions-hover-info:before {
+.exhibition-slider .slide:hover .exhibitions-hover-info:after, .exhibition-slider .slide:hover .exhibitions-hover-info:before {
     width: 90%;
     height: 90%;
     border-color: var(--accent);
     transition: all .25s, border-color .1s;
     transition-delay: .2s;
 }
+
 .exhibitions-hover-info:before {
-    content:'';
+    content: '';
     transition-delay: .2s;
     box-sizing: border-box;
-    position:absolute;
-    top:0;
-    right:0;
+    position: absolute;
+    top: 0;
+    right: 0;
     height: 0;
-    width:0;
+    width: 0;
     border-top: 1px solid transparent;
     border-right: 1px solid transparent;
     box-sizing: border-box;
     transition: all .25s, border-color .5s;
     margin: 10.5px 5%;
 }
+
 .exhibitions-hover-info:after {
-    content:'';
+    content: '';
     transition-delay: .2s;
     box-sizing: border-box;
-    position:absolute;
-    left:0;
-    bottom:0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 0;
     height: 0;
     border-top: none;
@@ -563,6 +615,7 @@ new style with block class but without new text format
 .related-content-block .views-field-field-related-exhibitions h2 {
     margin: 0;
 }
+
 .related-content-block .block-title {
     font-size: 28px;
     color: #502d0e;
@@ -571,6 +624,7 @@ new style with block class but without new text format
     border-bottom: 1px solid #ccc;
     box-shadow: 0 1px 0px #efefef;
 }
+
 .related-content-block .views-row {
     display: flex;
     flex-wrap: wrap;
@@ -579,49 +633,55 @@ new style with block class but without new text format
     border-bottom: 1px solid #ccc;
     box-shadow: 0 1px 0px #efefef;
 }
+
 .related-content-block .views-row-last {
     border-bottom: none;
     box-shadow: none;
 }
+
 .related-content-block .views-row .right-side-info {
     flex: 1 0 300px;
-    margin-left:20px;
+    margin-left: 20px;
 }
+
 .related-content-block .views-field-field-primary-image .field-content a, .related-content-block .views-field-field-image .field-content a, .related-content-block .views-field-field-video-thumbnail .field-content a {
     display: block;
     margin-bottom: 12px;
     width: 140px;
     height: 140px;
 }
+
 .related-content-block .views-row .right-side-info p {
     margin: 0;
 }
-.related-content-block .views-field-field-primary-image img, .related-content-block .views-field-field-image img, .related-content-block .views-field-field-video-thumbnail img{
+
+.related-content-block .views-field-field-primary-image img, .related-content-block .views-field-field-image img, .related-content-block .views-field-field-video-thumbnail img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     background: #ccc;
 }
-.related-content-block .views-field-field-type,
-.related-content-block .views-field-field-video-categories{
+
+.related-content-block .views-field-field-type, .related-content-block .views-field-field-video-categories {
     color: var(--accent);
     font-size: 12px;
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 1.5px;
 }
+
 .related-content-block .views-field-field-related-content h2 {
     color: #502d0e;
     margin: 0;
 }
-.related-content-block .views-field-field-related-exhibitions h2 a, .related-content-block .views-field-field-related-content h2 a,
-.related-content-block .views-field-title h2 a {
+
+.related-content-block .views-field-field-related-exhibitions h2 a, .related-content-block .views-field-field-related-content h2 a, .related-content-block .views-field-title h2 a {
     background: none;
     transition: .15s;
     color: #502d0e;
 }
-.related-content-block .views-field-field-related-exhibitions h2 a:hover, .related-content-block .views-field-field-related-content h2 a:hover,
-.related-content-block .views-field-title h2 a:hover{
+
+.related-content-block .views-field-field-related-exhibitions h2 a:hover, .related-content-block .views-field-field-related-content h2 a:hover, .related-content-block .views-field-title h2 a:hover {
     color: var(--accent);
 }
 
@@ -638,73 +698,88 @@ new style with block class but without new text format
     box-shadow: 0 1px 0px #efefef;
     margin: 0;
 }
+
 .current-exhibitions-sidebar {
     border: 1px solid #ccc;
     box-shadow: 0 0px 0px 1px #efefef;
 }
+
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar {
     padding: 0 5%;
 }
+
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .views-row {
     display: flex;
     flex-wrap: wrap;
     padding: 16px 0;
     border-bottom: 1px solid #ccc;
 }
+
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .views-row-last {
     border-bottom: none;
 }
+
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .views-field-field-primary-image {
     flex: 0 0 60px;
     margin-right: 10px;
 }
+
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .right-info {
     flex: 1 0 60%;
 }
+
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .views-field-field-primary-image img {
     height: 60px;
     max-width: 80px;
     object-fit: cover;
     width: auto;
 }
+
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .views-field-title a {
     font-size: 16px;
     font-weight: 600;
     background: none;
     transition: .15s;
 }
+
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .views-field-title a:hover {
     color: var(--accent);
 }
+
 .current-exhibitions-sidebar .view-current-exhibitions-sidebar .views-field-field-exhibition-dates {
     font-size: 12px;
 }
 
 /*** exhibitions placeholder page. ***/
-.page-exhibitions .views-row{
+.page-exhibitions .views-row {
     border-bottom: solid grey 1px;
     padding-bottom: 20px;
     margin-bottom: 50px;
 }
+
 /**********Exhibitions aggregate page*********/
 .exhibitions-aggregate-block {
     background-color: #f2f2f2;
 }
+
 .exhibitions-aggregate-block .views-field-field-link .field-content {
     display: flex;
     align-items: center;
 }
+
 .exhibitions-aggregate-block .views-field-field-link {
     font-weight: 200;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
+
 .exhibitions-aggregate-block .views-field-field-link img {
     width: 20px;
     margin-right: 10px;
     margin-left: 0;
 }
+
 /*wrapper for all visible fields*/
 .exhibitions-aggregate-block .exhibitions-aggregate-content {
     display: flex;
@@ -713,12 +788,15 @@ new style with block class but without new text format
     width: 100%;
     min-height: 300px;
 }
+
 .exhibitions-aggregate-block .views-row:nth-child(2n) .exhibitions-aggregate-content {
     flex-direction: row-reverse;
 }
+
 .exhibitions-aggregate-block .views-row {
     position: relative;
 }
+
 .exhibitions-aggregate-block .views-field-nid a {
     position: absolute;
     z-index: 2;
@@ -728,28 +806,30 @@ new style with block class but without new text format
     width: 100%;
     height: 100%;
 }
+
 .exhibitions-aggregate-block .views-field-nid a:before {
-    content:'';
+    content: '';
     transition-delay: .2s;
     box-sizing: border-box;
-    position:absolute;
+    position: absolute;
     top: 0%;
     right: 0%;
     height: 0;
-    width:0;
+    width: 0;
     border-top: 1px solid transparent;
     border-right: 1px solid transparent;
     box-sizing: border-box;
     transition: all .5s, border-color 2s;
     margin: 20px 1.5%;
 }
+
 .exhibitions-aggregate-block .views-field-nid a:after {
-    content:'';
+    content: '';
     transition-delay: .2s;
     box-sizing: border-box;
-    position:absolute;
-    left:0;
-    bottom:0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
     width: 0;
     height: 0;
     border-top: none;
@@ -759,8 +839,8 @@ new style with block class but without new text format
     transition: all .5s, border-color 1s;
     margin: 20px 1.5%;
 }
-.exhibitions-aggregate-block .views-row:hover .views-field-nid a:after,
-.exhibitions-aggregate-block .views-row:hover .views-field-nid a:before {
+
+.exhibitions-aggregate-block .views-row:hover .views-field-nid a:after, .exhibitions-aggregate-block .views-row:hover .views-field-nid a:before {
     width: 97%;
     height: calc(100% - 40px);
     border-color: var(--accent);
@@ -779,15 +859,18 @@ new style with block class but without new text format
     flex: 1 0 300px;
     padding: calc(3% + 10px) calc(3vw + 5px);
 }
+
 .exhibitions-aggregate-block .views-field-title {
     flex: .8 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 }
+
 .exhibitions-aggregate-block .views-field-title h2 {
     line-height: 1.2em;
 }
+
 .exhibitions-aggregate-block .views-field-title:after {
     content: '';
     display: block;
@@ -796,9 +879,11 @@ new style with block class but without new text format
     background: #333;
     height: 2px;
 }
+
 .exhibitions-aggregate-block .views-field-title .field-content {
     margin-bottom: 20px;
 }
+
 .exhibitions-aggregate-block .views-field-field-exhibition-dates {
     font-size: 14px;
     letter-spacing: 1px;
@@ -814,32 +899,39 @@ new style with block class but without new text format
     line-height: 0;
     max-height: 420px;
 }
+
 .exhibitions-aggregate-block .views-field-field-primary-image .field-content {
     height: 100%;
     line-height: 0;
 }
+
 .exhibitions-aggregate-block .views-field-field-primary-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: .4s;
 }
+
 .exhibitions-aggregate-block.past-exhibitions-block {
     padding: .1px 12vw;
     background: white;
 }
+
 .exhibitions-aggregate-block.past-exhibitions-block .views-row {
     margin-bottom: 100px;
     transition: 0.8s 0s;
 }
+
 .exhibitions-aggregate-block.past-exhibitions-block .views-row:hover {
     box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.35);
     transition: 0.8s .4s;
 }
+
 .exhibitions-aggregate-block.past-exhibitions-block .exhibitions-aggregate-info {
     flex: 1 0 50%;
     min-width: 300px;
 }
+
 .exhibitions-aggregate-block.past-exhibitions-block .views-field-field-primary-image {
     flex: 1 0 50%;
 }
@@ -850,18 +942,22 @@ new style with block class but without new text format
     color: #502d0e;
     text-transform: uppercase;
 }
+
 .videos-slider .view-header #video-text {
     color: var(--accent);
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
 }
+
 .videos-slider .view-header {
     margin-bottom: 20px;
 }
+
 .videos-slider .video-slider-wrap .view-header {
     padding-right: 80px;
 }
+
 .videos-slider .video-slider-wrap {
     align-items: center;
 }
@@ -870,9 +966,11 @@ new style with block class but without new text format
     padding: 50px 12vw;
     background: #f2f2f2;
 }
+
 .videos-slider .slide__content {
     background: none;
 }
+
 .videos-slider .slick-arrow {
     border: 0;
     border-radius: 0;
@@ -888,29 +986,34 @@ new style with block class but without new text format
     background: rgba(255, 255, 255, .95);
     cursor: pointer;
 }
+
 .videos-slider .nav.slick__arrow {
     top: 55%;
 }
+
 .videos-slider .slick-arrow::before {
     font-size: 66px;
     top: 47%;
 }
+
 .videos-slider .slick-prev {
     left: -18px;
     box-shadow: 3px 4px 10px -2px black;
 }
+
 .videos-slider .slick-next {
     right: -18px;
     box-shadow: -3px 4px 10px -2px rgba(0, 0, 0, 0.65);
 }
+
 .videos-slider .views-field-title a {
     font-weight: 600;
     background: none;
 }
+
 .videos-slider .slick-slide img {
     margin-bottom: 10px;
 }
-
 
 /********Videos Page Content********/
 .video-page-content {
@@ -918,17 +1021,20 @@ new style with block class but without new text format
     background: white;
     padding: 60px 12vw 20px 12vw;
 }
+
 .video-page-content .views-row {
     display: flex;
     flex-wrap: wrap;
     background: black;
 }
+
 .video-page-content .views-field-title h2 {
     color: white;
     font-size: calc(8px + 1.8vw);
     line-height: 1.2em;
     margin: 0;
 }
+
 .video-page-content .views-field-field-video-categories {
     color: var(--accent);
     font-size: 14px;
@@ -938,6 +1044,7 @@ new style with block class but without new text format
     display: flex;
     align-items: center;
 }
+
 .video-page-content .views-field-field-video-categories:before {
     content: '';
     background-image: url('../images/PlayIcon.png');
@@ -947,9 +1054,11 @@ new style with block class but without new text format
     background-size: 14px;
     margin-right: 16px;
 }
+
 .video-page-content .views-field-field-video-link {
     flex: 0 0 calc(74.3vw - 35%);
 }
+
 .video-info-panel {
     padding: 2%;
     padding-top: 2vw;
@@ -958,13 +1067,15 @@ new style with block class but without new text format
 
 @media only screen and (max-width: 744px) {
     .video-page-content .views-field-field-video-link {
-	flex: 1 0 calc(74.3vw - 35%);
+        flex: 1 0 calc(74.3vw - 35%);
     }
+
     .video-page-content .views-field-title h2 {
-	font-size: 36px;
+        font-size: 36px;
     }
+
     .video-info-panel {
-	padding: 4%;
+        padding: 4%;
     }
 }
 
@@ -972,66 +1083,72 @@ new style with block class but without new text format
 .page-videos h1#page-title {
     padding-bottom: 0;
 }
+
 .page-videos #content {
     padding-top: 0;
 }
+
 .page-videos .views-exposed-form .views-exposed-widget {
     float: none;
     display: inline-block;
 }
+
 .page-videos .views-exposed-form .views-exposed-widgets {
     padding: 10px 0 20px 0;
     border-bottom: 1px solid #ccc;
 }
+
 .page-videos .views-exposed-form .views-exposed-widget label {
     color: #502d0e;
     font-weight: 300;
     font-size: 18px;
     margin-bottom: 10px;
 }
+
 .page-videos .views-exposed-form .views-exposed-widget div {
     display: inline-block;
 }
 
 @media only screen and (min-width: 1024px) {
     .page-videos .views-exposed-form .views-exposed-widgets {
-	width: 158.5%;
+        width: 158.5%;
     }
+
     .page-videos .int-side-menu {
-	margin-top: calc(4vw + 177px);    
+        margin-top: calc(4vw + 177px);
     }
 }
+
 .page-videos .video-aggregate .view-content:after {
     content: '';
     flex: 1 230px;
     /* max-width: 460px; */
 }
+
 @media only screen and (min-width: 1903px) {
     .page-videos .video-aggregate .view-content:after {
-	flex: 1000;
+        flex: 1000;
     }
 }
+
 .page-videos .video-aggregate .view-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin: 20px -6px 0 -6px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
 }
+
 .page-videos .video-aggregate .views-row {
-    flex: 1 0 230px;
-    padding: 0 6px;
-    margin-bottom: 60px;
-}
-@media only screen and (min-width: 600px) {
-    .page-videos .video-aggregate .views-row {
-	/* max-width: 230px; */
-    }
+    margin-bottom: 20px;
+    max-width: 300px;
+    margin: auto;
+    height: 100%;
 }
 .page-videos .video-aggregate .views-row .views-field-field-video-thumbnail img {
     width: 100%;
     height: 150px;
     object-fit: cover;
 }
+
 .page-videos .video-aggregate .views-row .views-field-field-video-categories {
     color: var(--accent);
     font-weight: 600;
@@ -1039,15 +1156,15 @@ new style with block class but without new text format
     font-size: 12px;
     margin: 6px 0;
 }
+
 .page-videos .video-aggregate .views-row .views-field-title a {
     background: none;
     font-weight: 600;
     line-height: 1.2em;
 }
+
 @media only screen and (min-width: 600px) {
-
 }
-
 
 /*Front page*/
 .front #columns {
