@@ -1,0 +1,128 @@
+.learn-acc .views-field-field-learn-image {
+    line-height: 0;
+    height: 120px;
+    transition: 0.4s ease;
+    overflow: hidden;
+}
+
+.learn-acc .views-field-field-learn-image img {
+    object-fit: cover;
+    width: 100%;
+    line-height: 0;
+    filter: brightness(.45);
+    transition: .4s;
+}
+
+.learn-acc .views-row {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.learn-acc-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+}
+
+.learn-acc-title-plus {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.learn-acc-text .views-field-title h2 {
+    font-size: 36px;
+    margin: 0;
+    line-height: 1;
+}
+
+.learn-acc .views-field-field-learn-image .field-content {
+    height: 100%;
+    position: relative;
+}
+
+.views-field-field-image-orientation {
+    display: none;
+}
+
+.learn-acc .view-content > h3 {
+    font-size: 36px;
+    color: #502d0e;
+    font-weight: 400;
+    margin: 75px 0 25px 0;
+}
+.learn-acc .views-field-body a,
+.learn-acc .views-field-body p {
+    color: white;
+    line-height: 1.4em;
+}
+.learn-acc .learn-acc-link a {
+    color: var(--accent);
+    font-weight: 600;
+    padding: 10px 30px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.learn-acc .learn-acc-link a:hover {
+    color: white;
+    background-color: var(--accent);
+}
+.learn-acc-title-plus .views-field-title {
+    line-height: 1;
+}
+
+.learn-acc-title-plus .learn-acc-plus {
+    line-height: 1;
+    margin-top: -8px;
+    transition: .25s;
+    user-select: none;
+}
+@media only screen and (max-width: 1024px) {
+    .learn-acc .views-row {
+	margin: 0 -12vw;
+    }
+}
+
+/*Expanded*/
+.learn-acc .views-field-field-learn-image.learn-expanded {
+    height: calc(400px - 5vw);
+}
+.learn-acc .views-field-field-learn-image.learn-expanded img {
+    filter: brightness(.25);
+}
+/*plus button*/
+.learn-acc .views-field-field-learn-image.learn-expanded ~ .learn-acc-text .views-field-nothing {
+    transform: rotateZ(45deg);
+}
+
+/*Learn admin view*/
+.learn-admin-table caption {
+    font-size: 22px;
+    margin: 40px 0 20px 0;
+    font-weight: 600;
+}
+
+/*staging page*/
+.learn-image-input {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    color: white;
+    letter-spacing: 1px;
+    user-select: none;
+}
+.learn-image-input input {
+    height: 30px;
+    width: 50px;
+    color: #333;
+}
