@@ -953,7 +953,10 @@ ul.pager li.pager-current {}
 /*
  * Wrapper for a form element (or group of form elements) and its label
  */
-.form-item {}
+.node-type-webform .form-item {
+    padding-bottom: 10px;
+}
+
 .form-item input.error,
 .form-item textarea.error,
 .form-item select.error {
