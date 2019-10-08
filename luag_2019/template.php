@@ -54,38 +54,43 @@ function adaptivetheme_subtheme_process_html(&$vars) {
 
 
 function luag_2019_preprocess_page(&$vars){
-    dpm($vars);
-    //let's finish this stuff!
+    //dpm($vars);
+    
     $menu_parent = '';
-    foreach($vars['main_menu'] as $menu => $menu_atts){
-        if(strpos($menu,'active-trail')){
-            $menu_parent = $menu_atts['title'];
+    if(!empty($vars['main_menu'])){
+        foreach($vars['main_menu'] as $menu => $menu_atts){
+            if(strpos($menu,'active-trail')){
+                $menu_parent = $menu_atts['title'];
+            }
         }
     }
     //page is not in the main menu
-    //the 'menu_block_2' needs to be the name of the menu block that is creating the sidebar second
+    //the 'menu_block_1' needs to be the name of the menu block that is creating the sidebar second
 
    if(empty($menu_parent)){
-        if(!empty($vars['page']['sidebar_second']['menu_block_1'])){
-            $parent_menu_key = array_keys($vars['page']['sidebar_second']['menu_block_1']['#content'])[0];
-            $menu_parent = $vars['page']['sidebar_second']['menu_block_1']['#content'][$parent_menu_key]['#title'];
-        }
-    }
-
+       if(!empty($vars['page']['sidebar_second']['menu_block_1'])){
+           if(!empty($vars['page']['sidebar_second']['menu_block_1']['#block'])){
+               $menu_block_obj = $vars['page']['sidebar_second']['menu_block_1']['#block'];
+               if(property_exists($menu_block_obj,'subject')){
+                   $menu_parent = $menu_block_obj->subject; //The name of the menu
+               }
+           }
+       }
+   }
+   //$menu_parent will still be empty if any of the above failed.
    
      
     if(empty($menu_parent)){
-        //default behaviour.  We need an image here to not break anything
+        //default behaviour.  We need an image and title here to not break the header space.
         $menu_parent='LUAG';
     }
-    // Here we need to do something if the menu parent doesn't exist or whatever
     
     if($menu_parent != strip_tags($menu_parent)){
         //This means that this is the search page because the menu contains html and thus the strip_tags is different than the string
         $menu_parent = 'Search';
     }
 
-    
+    //return an exception, becuase the content tpye is an exhibition
     if(!empty($vars['page']['content']['system_main']['nodes'])){
         $nodenums = array_keys($vars['page']['content']['system_main']['nodes']);
 
@@ -96,8 +101,7 @@ function luag_2019_preprocess_page(&$vars){
         }
     }
  
-
-    //some exceptions where we don't need this header image
+    //some other exceptions where we don't need this header image
     if($vars['is_front']){
         $menu_parent = 'exception';
     }
@@ -144,12 +148,7 @@ function adaptivetheme_subtheme_process_block(&$vars) {
 // */
 
 
-function luag_header_images($luag_vars){
-
-//outline of what to do:
-//videos
-
-    
+function luag_header_images($luag_vars){    
     $menu_parent = $luag_vars['header_menu_parent'];
     
     if($menu_parent == 'exception'){
@@ -167,17 +166,18 @@ function luag_header_images($luag_vars){
         $head_key = array_keys($tax_item)[0];
         $head_title = $tax_item[$head_key]->name;
         $head_image = $tax_item[$head_key]->field_header_image['und'][0]['filename'];            
+        //only set the media path to the public files directory if the header image exists.
+        $media_path=variable_get('file_public_path');
     }
-    
-    //we will start with the simple 'html' way of displaying the image, then move to the drupal-y way of doing things.
-    
-    $head_string = '<div id="internal-hero-img"><img src="/files/luag/'.$head_image.'"></div>';
+    else{
+        $media_path=drupal_get_path('theme', variable_get('theme_default')).'/images';
+        $head_image='hero-fallback.png';
+    }
 
+    //one more check, make sure that the path+file exists, and if not use the else above.
+    $head_string = '<div id="internal-hero-img"><img src="/'.$media_path.'/'.$head_image.'"></div>';
     
-
-//don't forget that we will need a fallback header image, maybe the same one as search. not sure yet. 
     return $head_string;
-
 }
 
 function luag_header_title($luag_vars){
