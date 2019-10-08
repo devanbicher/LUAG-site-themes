@@ -54,8 +54,8 @@ function adaptivetheme_subtheme_process_html(&$vars) {
 
 
 function luag_2019_preprocess_page(&$vars){
-    //dpm($vars);
-    
+    dpm($vars);
+    //let's finish this stuff!
     $menu_parent = '';
     foreach($vars['main_menu'] as $menu => $menu_atts){
         if(strpos($menu,'active-trail')){
