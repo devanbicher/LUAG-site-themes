@@ -54,9 +54,9 @@ function adaptivetheme_subtheme_process_html(&$vars) {
 
 
 function luag_2019_preprocess_page(&$vars){
-    //dpm($vars);
-    
     $menu_parent = '';
+
+    //first check the main menu
     if(!empty($vars['main_menu'])){
         foreach($vars['main_menu'] as $menu => $menu_atts){
             if(strpos($menu,'active-trail')){
@@ -64,9 +64,9 @@ function luag_2019_preprocess_page(&$vars){
             }
         }
     }
+
     //page is not in the main menu
     //the 'menu_block_1' needs to be the name of the menu block that is creating the sidebar second
-
    if(empty($menu_parent)){
        if(!empty($vars['page']['sidebar_second']['menu_block_1'])){
            if(!empty($vars['page']['sidebar_second']['menu_block_1']['#block'])){
@@ -77,8 +77,7 @@ function luag_2019_preprocess_page(&$vars){
            }
        }
    }
-   //$menu_parent will still be empty if any of the above failed.
-   
+   //$menu_parent will still be empty if any of the above failed.   
      
     if(empty($menu_parent)){
         //default behaviour.  We need an image and title here to not break the header space.
@@ -107,7 +106,6 @@ function luag_2019_preprocess_page(&$vars){
     }
     
     $vars['page']['luag_vars']['header_menu_parent'] = $menu_parent;
-    
 }
 
 
@@ -151,9 +149,11 @@ function adaptivetheme_subtheme_process_block(&$vars) {
 function luag_header_images($luag_vars){    
     $menu_parent = $luag_vars['header_menu_parent'];
     
+    //return nothing if there is an 'exception'
     if($menu_parent == 'exception'){
         return '';
     }
+
     $head_tax_img = new EntityFieldQuery();
     $head_tax_img->entityCondition('entity_type','taxonomy_term')
                  ->entityCondition('bundle','header_images')
@@ -165,16 +165,28 @@ function luag_header_images($luag_vars){
         $tax_item = entity_load('taxonomy_term',array(array_keys($tax_term['taxonomy_term'])[0]));
         $head_key = array_keys($tax_item)[0];
         $head_title = $tax_item[$head_key]->name;
-        $head_image = $tax_item[$head_key]->field_header_image['und'][0]['filename'];            
-        //only set the media path to the public files directory if the header image exists.
-        $media_path=variable_get('file_public_path');
+        if(!empty($tax_item[$head_key]->field_header_image['und'][0]['filename'])){
+            //only set the media path to the public files directory if the header image exists.
+            $head_image = $tax_item[$head_key]->field_header_image['und'][0]['filename'];            
+            $media_path=variable_get('file_public_path');
+        }
+        else{
+            $media_path=drupal_get_path('theme', variable_get('theme_default')).'/images';
+            $head_image='hero-fallback.png';
+        }
+        
     }
     else{
         $media_path=drupal_get_path('theme', variable_get('theme_default')).'/images';
         $head_image='hero-fallback.png';
     }
 
-    //one more check, make sure that the path+file exists, and if not use the else above.
+    //check that the file specified above exists.
+    if(empty($head_image) OR !file_exists(DRUPAL_ROOT.'/'.$media_path.'/'.$head_image)){
+        $media_path=drupal_get_path('theme', variable_get('theme_default')).'/images';
+        $head_image='hero-fallback.png';
+    }
+
     $head_string = '<div id="internal-hero-img"><img src="/'.$media_path.'/'.$head_image.'"></div>';
     
     return $head_string;
