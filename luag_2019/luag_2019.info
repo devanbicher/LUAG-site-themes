@@ -26,6 +26,7 @@
   stylesheets[screen][] = css/announcementsslider.css
   stylesheets[screen][] = css/doubleslider.css
   stylesheets[screen][] = css/webforms.css
+  stylesheets[screen][] = css/collections.css
 
   ; Print - uncomment to load basic print styles.
   ; stylesheets[print][] = css/print.css

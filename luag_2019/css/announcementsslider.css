@@ -75,6 +75,12 @@
     height: 100%;
     padding: 6%;
 }
+@media only screen and (max-width: 510px) {
+    .front-announcements-slider .views-field-field-image {
+	display: none;
+    }
+}
+
 .front-announcements-slider .views-field-field-image .field-content {
     height: 100%;
 }
