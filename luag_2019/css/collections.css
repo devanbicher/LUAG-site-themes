@@ -29,12 +29,11 @@
 .collection-slider .collection-slider-wrap .view-content {
     flex: 1 0 75%;
     min-width: 0;
-    /*Hello there, strangest fix in the world*/
 }
 
 .collection-slider .slick-slide img {
     width: 100%;
-    height: 260px;
+    height: 180px;
     object-fit: cover;
     cursor: pointer;
 }
@@ -145,7 +144,7 @@
     border-right: 1px solid transparent;
     box-sizing: border-box;
     transition: all .25s, border-color .5s;
-    margin: 13px 5%;
+    margin: 9px 5%;
 }
 
 .collection-hover-info:after {
@@ -162,16 +161,20 @@
     border-bottom: 1px solid transparent;
     border-left: 1px solid transparent;
     transition: all .25s, border-color .5s;
-    margin: 13px 5%;
+    margin: 9px 5%;
 }
 
 
 
 /*Lightbox*/
+.page-node-6 #lightbox2-overlay {
+    opacity: .85 !important;
+}
 .page-node-6 #outerImageContainer {
     min-width: 95vw;
     max-width: 95vw;
     min-height: 80vh;
+    background-color: #101010 !important;
 }
 .page-node-6 #modalContainer {
     min-width: 100%;
@@ -200,7 +203,8 @@
 .colelctionlb-wrapper {
     text-align: left;
     padding: 30px;
-    background: #404040;
+    padding-top: 100px;
+    background: #333;
     color: white;
     flex: 0 0 300px;
 }
@@ -208,6 +212,46 @@
     .colelctionlb-wrapper {
 	flex: 1 0 300px;
     }
+}
+.collectionlb-name {
+    color: #b2b2b2;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.collectionlb-title-text {
+    color: white;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.2em;
+    margin-bottom: 10px;
+}
+.collectionlb-year,
+.collectionlb-medium,
+.collectionlb-artist,
+.collectionlb-donor {
+    font-size: 14px;
+    color: #b2b2b2;
+    margin-bottom: 6px;
+}
+.collectionlb-link a {
+    font-size: 14px;
+    color: var(--accent);
+}
+.collectionlb-long-text {
+    color: white;
+    font-size: 12px;
+    border-top: 1px solid #b2b2b2;
+    padding-top: 20px;
+    margin: 20px 0;
+    line-height: 2em;
+}
+.collectionlb-download a {
+    padding: 5px;
+    color: #b2b2b2;
+    border: 1px solid #b2b2b2;
 }
 
 /*controls*/
@@ -239,19 +283,60 @@
     justify-content: space-between;
     align-items: center;
 }
+.page-node-6 div#imageDataContainer div#bottomNav a#frameNextLink,
 .page-node-6 div#imageDataContainer div#bottomNav a#framePrevLink {
     padding: 0 !important;
+    background: none;
+}
+.page-node-6 div#imageDataContainer div#bottomNav a#framePrevLink:after,
+.page-node-6 div#imageDataContainer div#bottomNav a#frameNextLink:after {
+    content: "‹";
+    font-family: 'Montserrat', 'Frutiger';
+    font-size: 90px;
+    font-weight: 100;
+    color: #b2b2b2;
+    line-height: 0.3em;
+    transition: .15s;
+    display: block;
+    width: 45px;
+    height: 45px;
+}
+.page-node-6 div#imageDataContainer div#bottomNav a#frameNextLink:after {
+    content: "›";
+}
+.page-node-6 div#imageDataContainer div#bottomNav a#framePrevLink:hover:after,
+.page-node-6 div#imageDataContainer div#bottomNav a#frameNextLink:hover:after {
+    color: var(--accent);
 }
 .page-node-6 div#imageDataContainer div#bottomNav a#bottomNavClose {
     margin: 0;
     position: absolute;
-    top: 0;
+    top: 1px;
     right: -300px;
     background-size: cover;
     height: 50px;
     width: 50px;
+    background: none;
+    background-color: transparent !important;
 }
-
+a#bottomNavClose:after {
+    content: "\2715";
+    color: #b2b2b2;
+    font-size: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 50px;
+    height: 50px;
+    line-height: 1em;
+    font-weight: 100;
+    transition: .15s;
+}
+a#bottomNavClose:hover:after {
+    color: var(--accent);
+}
 @media only screen and (max-width: 1271px) {
     .page-node-6 div#imageDataContainer div#bottomNav {
 	width: 98vw;
