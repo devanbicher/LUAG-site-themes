@@ -220,6 +220,14 @@
     font-size: 12px;
     font-weight: 600;
 }
+.collectionlb-name:before {
+    content: url(../images/label_icon.svg);
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    vertical-align: bottom;
+    margin-right: 6px;
+}
 .collectionlb-title-text {
     color: white;
     font-style: italic;
@@ -252,7 +260,25 @@
     padding: 5px;
     color: #b2b2b2;
     border: 1px solid #b2b2b2;
+    box-shadow: 0 0 1px rgba(178, 178, 178, 0.6);
 }
+.collectionlb-download a:before {
+    content: url(../images/download_icon.svg);
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: text-top;
+    margin-right: 4px;
+    transition: .15s;
+}
+.collectionlb-download a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+.collectionlb-download a:hover:before {
+    filter: brightness(70%) sepia(1) hue-rotate(55deg) saturate(223%) brightness(108%);
+}
+
 
 /*controls*/
 .page-node-6 div#imageDataContainer {
@@ -312,7 +338,7 @@
     margin: 0;
     position: absolute;
     top: 1px;
-    right: -300px;
+    right: -290px;
     background-size: cover;
     height: 50px;
     width: 50px;

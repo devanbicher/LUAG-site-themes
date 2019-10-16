@@ -35,8 +35,11 @@
     justify-content: space-between;
     align-items: center;
     height: 120px;
+    transition: .15s;
 }
-
+.learn-acc .views-row:hover .learn-acc-plus  {
+    color: var(--accent);
+}
 .learn-acc-text .views-field-title h2 {
     font-size: 36px;
     margin: 0;
@@ -57,6 +60,9 @@
     color: #502d0e;
     font-weight: 400;
     margin: 75px 0 25px 0;
+}
+.learn-acc .view-content > h3 a {
+    background: none;
 }
 .learn-acc .views-field-body a,
 .learn-acc .views-field-body p {
@@ -86,7 +92,12 @@
     margin-top: -8px;
     transition: .25s;
     user-select: none;
+    transition: transform .15s .15s, color .15s 0s;
 }
+#learn-expanded + .learn-acc-text .learn-acc-title-plus .learn-acc-plus {
+    transform: rotate(45deg);
+}
+
 @media only screen and (max-width: 1024px) {
     .learn-acc .views-row {
 	margin: 0 -12vw;

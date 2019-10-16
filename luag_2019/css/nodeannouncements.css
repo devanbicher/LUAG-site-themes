@@ -96,6 +96,10 @@
     align-items: center;
     line-height: 0;
 }
+.node-type-announcement .views-field-field-image .Director039s-Message {
+    float: left;
+    margin: 0 30px 10px 0;
+}
  .node-type-announcement .announcement-svg-icon {
     width: 100%;
     display: flex;
