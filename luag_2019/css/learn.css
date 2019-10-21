@@ -115,6 +115,27 @@
 .learn-acc .views-field-field-learn-image.learn-expanded ~ .learn-acc-text .views-field-nothing {
     transform: rotateZ(45deg);
 }
+/*Anchors View*/
+.learn-anchors .view-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #808080;
+}
+
+.learn-anchors .views-row {
+    flex: 0 0 120px;
+    margin-bottom: 24px;
+}
+
+.learn-anchors .views-row a {
+    background: none;
+    color: #808080;
+}
+
+.learn-anchors .views-row a:hover {
+    color: var(--accent);
+}
 
 /*Learn admin view*/
 .learn-admin-table caption {

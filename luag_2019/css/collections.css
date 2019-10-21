@@ -199,6 +199,7 @@
 }
 .collectionlb-img img {
     max-height: 100%;
+    object-fit: contain;
 }
 .colelctionlb-wrapper {
     text-align: left;
@@ -207,6 +208,8 @@
     background: #333;
     color: white;
     flex: 0 0 300px;
+    max-height: 80vh;
+    overflow-y: auto;
 }
 @media only screen and (max-width: 947px) {
     .colelctionlb-wrapper {
@@ -256,11 +259,20 @@
     margin: 20px 0;
     line-height: 2em;
 }
+.collectionlb-download {
+    margin-bottom: 12px;
+}
 .collectionlb-download a {
     padding: 5px;
     color: #b2b2b2;
     border: 1px solid #b2b2b2;
     box-shadow: 0 0 1px rgba(178, 178, 178, 0.6);
+}
+.collectionlb-terms {
+    font-size: 12px;
+}
+.collectionlb-terms a:hover {
+    color: var(--accent);
 }
 .collectionlb-download a:before {
     content: url(../images/download_icon.svg);

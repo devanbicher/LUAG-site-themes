@@ -1160,8 +1160,11 @@ new style with block class but without new text format
     width: 100%;
     height: 150px;
     object-fit: cover;
+    filter: brightness(1);
 }
-
+.page-videos .video-aggregate .views-row:hover .views-field-field-video-thumbnail img {
+    filter: brightness(0.8);
+}
 .page-videos .video-aggregate .views-row .views-field-field-video-categories {
     color: var(--accent);
     font-weight: 600;
@@ -1187,4 +1190,31 @@ new style with block class but without new text format
 /*Search page*/
 .page-search #page-title {
     display: none;
+}
+.page-search .region-sidebar-second .item-list li.leaf {
+    margin: 0 0 6px 0;
+    list-style: none;
+}
+.page-search .int-side-menu {
+    margin-bottom: 30px;
+}
+.page-search .block-facetapi {
+    margin-bottom: 30px;
+}
+.page-search .node-page *:not(.node-title):not(a) {
+    font-size: 14px;
+    color: #333;
+    font-weight: 200;
+}
+.page-search .node-title a {
+    color: #333;
+}
+
+.page-search article.node {
+    border-bottom: 1px solid #808080;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+}
+.page-search article.node .node-readmore a {
+    color: var(--accent);
 }
