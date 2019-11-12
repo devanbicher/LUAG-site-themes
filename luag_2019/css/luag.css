@@ -62,15 +62,13 @@ input[type="submit"] {
     margin: 0.2em 0;
 }
 
-/* original style: 
-#block-block-4 .block-content {
-new style with block class but without new text format
-.top-left-logo .block-content {
-*/
 .top-left-logo .block-content a {
     display: flex;
     height: 100%;
+    width: fit-content;
     align-items: center;
+    position: relative;
+    z-index: 10000000;
 }
 
 #luag-logo-svg img {
@@ -523,6 +521,7 @@ new style with block class but without new text format
     width: 30px;
     height: 80px;
     pointer-events: auto;
+    cursor: pointer;
     position: absolute;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -1208,6 +1207,8 @@ new style with block class but without new text format
 }
 .page-search .node-title a {
     color: #333;
+    margin-bottom: 30px;
+    display: block;
 }
 
 .page-search article.node {
@@ -1217,4 +1218,38 @@ new style with block class but without new text format
 }
 .page-search article.node .node-readmore a {
     color: var(--accent);
+}
+
+.page-search .artstor-block {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+}
+
+/*Artstor Search Button*/
+#artstor-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+#artstor-search {
+    padding: 10px;
+    background: #333;
+    color: var(--accent);
+    letter-spacing: 2px;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .2s;
+}
+#artstor-search:hover {
+    color: white;
+}
+#artsearch-input:focus {
+    outline: none;
+}
+#artsearch-input {
+    padding: 4px;
+    border: 1px solid #333;
+    min-width: 280px;
+    min-height: 46px;
 }

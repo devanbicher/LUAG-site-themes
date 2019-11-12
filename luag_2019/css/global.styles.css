@@ -121,6 +121,11 @@ h6 {
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 0.5em;
 }
+hr {
+    border: none;
+    border-bottom: 1px solid #808080;
+}
+
 p,
 ul,
 ol,
@@ -137,10 +142,10 @@ ol,
 #columns h5:before,
 #columns h6:before,
 #columns p:before {
-  content: "";
-  width: 120px;
-  display: block;
-  overflow: hidden;
+    content: "";
+    width: 120px;
+    display: block;
+    overflow: hidden;
 }
 /* Extra WYSIWYG editor font styles */
 /* Standout text that needs to be bigger and more prominent, i.e standout. but not an alert */
@@ -157,6 +162,7 @@ ol,
 /* This is for small note-taking text, like with an '*' */
 .annotation-text{
     font-size: 12px !important;
+    color: #808080;
 }
 /* =============================================================================
  *   Links
@@ -486,6 +492,7 @@ a#title-a {
 #footer-social {
     display: flex;
     justify-content: flex-end;
+    flex-wrap: wrap;
     align-items: baseline;
     justify-self: flex-end;
 }
@@ -500,6 +507,9 @@ a#title-a {
 .region-blockgroup-footer-group .block {
     flex: 1 1 300px;
     margin: 15px 0px;
+}
+.region-blockgroup-footer-group .block-webform {
+    flex: 1 1 180px;
 }
 .region-blockgroup-footer-group {
     padding-top: 50px;
@@ -517,7 +527,7 @@ a#title-a {
     margin-right: 25px;
 }
 #block-block-2 {
-    flex-basis: 200px;
+    flex-basis: 180px;
 }
 #block-block-3 {
     flex-basis: 200px;
