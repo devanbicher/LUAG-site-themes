@@ -91,11 +91,12 @@
  * @see adaptivetheme_process_page()
  */
 ?>
-<div id="page-wrapper">
-	<div id="page" class="container <?php print $classes; ?>">
 		<div id="emergencyalert">
 			<script type="text/javascript" src="https://s3.amazonaws.com/widgets.omnilert.net/1397c767b627776244abee8c6f1e1f96-1691"></script>
 		</div>
+
+<div id="page-wrapper">
+	<div id="page" class="container <?php print $classes; ?>">
 
 		<!-- !Leaderboard Region -->
 		<?php print render($page['leaderboard']); ?>

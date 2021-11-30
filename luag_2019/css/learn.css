@@ -70,6 +70,7 @@
     line-height: 1.4em;
 }
 .learn-acc .learn-acc-link a {
+    display: inline-block;
     color: var(--accent);
     font-weight: 600;
     padding: 10px 30px;

@@ -240,9 +240,9 @@ pre, code, tt, samp, kbd, var {
     align-items: center;
 }
 .site-logo {
-    height: 30px;
+    height: 60px;
     box-sizing: border-box;
-    padding: 5px;
+    padding: 0px;
 }
 /*Site name and department*/
 #header-wrap {
@@ -1282,4 +1282,10 @@ nav.slick__arrow {
 }
 .slick-arrow:hover:before {
     color: #999;
+}
+
+/* email/mail form */
+
+article#node-1274{
+    border-bottom: solid var(--footer) 2px;
 }

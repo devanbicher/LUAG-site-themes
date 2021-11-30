@@ -1,3 +1,6 @@
+.front #block-views-exhibition-page-views-block-3 {
+    display: none;
+}
 .collection-slider .views-row {
     margin-bottom: 80px;
 }
@@ -37,7 +40,9 @@
     object-fit: cover;
     cursor: pointer;
 }
-
+.node-type-exhibition .collection-slider .slick-slide img {
+    height: 210px;
+}
 .collection-slider * {
     cursor: default;
 }
@@ -168,21 +173,25 @@
 
 
 /*Lightbox*/
+.node-type-exhibition #lightbox2-overlay, 
 .page-node-6 #lightbox2-overlay {
     opacity: .85 !important;
 }
+.node-type-exhibition #outerImageContainer,
 .page-node-6 #outerImageContainer {
     min-width: 95vw;
     max-width: 95vw;
     min-height: 80vh;
     background-color: #101010 !important;
 }
+.node-type-exhibition #modalContainer,
 .page-node-6 #modalContainer {
     min-width: 100%;
     min-height: 100%;
     max-width: 100%;
     padding: 0 !important;
 }
+.node-type-exhibition .lightbox-popup,
 .page-node-6 .lightbox-popup {
     height: 100%;
     width: 100%;
@@ -203,16 +212,6 @@
     max-height: 100%;
     object-fit: contain;
     position: relative;
-    z-index: 1;
-}
-.page-node-6 #bottomNav:before {
-    content: url(../images/loading.gif);
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    width: 32px;
-    height: 32px;
     z-index: 0;
 }
 .colelctionlb-wrapper {
@@ -307,16 +306,20 @@
 
 
 /*controls*/
+.node-type-exhibition div#imageDataContainer,
 .page-node-6 div#imageDataContainer {
     background: none !important;
     color: white !important;
 }
+node-type-exhibition div#imageDataContainer #imageData #imageDetails,
 .page-node-6 div#imageDataContainer #imageData #imageDetails {
     display: none;
 }
+.node-type-exhibition div#imageDataContainer #imageData,
 .page-node-6 div#imageDataContainer #imageData {
     height: 0;
 }
+.node-type-exhibition div#imageDataContainer div#bottomNav,
 .page-node-6 div#imageDataContainer div#bottomNav {
     position: absolute;
     top: 50%;
@@ -326,6 +329,7 @@
     width: calc(95vw - 301px);
     height: 100%;
 }
+.node-type-exhibition div#imageDataContainer div#bottomNav div#frameHoverNav,
 .page-node-6 div#imageDataContainer div#bottomNav div#frameHoverNav {
     width: 100%;
     position: absolute;
@@ -335,11 +339,16 @@
     justify-content: space-between;
     align-items: center;
 }
+.node-type-exhibition div#imageDataContainer div#bottomNav a#frameNextLink,
+.node-type-exhibition div#imageDataContainer div#bottomNav a#framePrevLink,
 .page-node-6 div#imageDataContainer div#bottomNav a#frameNextLink,
 .page-node-6 div#imageDataContainer div#bottomNav a#framePrevLink {
     padding: 0 !important;
     background: none;
 }
+
+.node-type-exhibition div#imageDataContainer div#bottomNav a#frameNextLink:after,
+.node-type-exhibition div#imageDataContainer div#bottomNav a#framePrevLink:after,
 .page-node-6 div#imageDataContainer div#bottomNav a#framePrevLink:after,
 .page-node-6 div#imageDataContainer div#bottomNav a#frameNextLink:after {
     content: "‹";
@@ -353,13 +362,18 @@
     width: 45px;
     height: 45px;
 }
+.node-type-exhibition div#imageDataContainer div#bottomNav a#frameNextLink:after,
 .page-node-6 div#imageDataContainer div#bottomNav a#frameNextLink:after {
     content: "›";
 }
+
+.node-type-exhibition div#imageDataContainer div#bottomNav a#framePrevLink:hover:after,
+.node-type-exhibition div#imageDataContainer div#bottomNav a#frameNextLink:hover:after,
 .page-node-6 div#imageDataContainer div#bottomNav a#framePrevLink:hover:after,
 .page-node-6 div#imageDataContainer div#bottomNav a#frameNextLink:hover:after {
     color: var(--accent);
 }
+.node-type-exhibition div#imageDataContainer div#bottomNav a#bottomNavClose,
 .page-node-6 div#imageDataContainer div#bottomNav a#bottomNavClose {
     margin: 0;
     position: absolute;
@@ -371,6 +385,7 @@
     background: none;
     background-color: transparent !important;
 }
+.node-type-exhibition a#bottomNavClose:after,
 .page-node-6 a#bottomNavClose:after {
     content: "\2715";
     color: #b2b2b2;
@@ -386,15 +401,18 @@
     font-weight: 100;
     transition: .15s;
 }
+.node-type-exhibition a#bottomNavClose:hover:after,
 .page-node-6 a#bottomNavClose:hover:after {
     color: var(--accent);
 }
 @media only screen and (max-width: 1271px) {
+    .node-type-exhibition div#imageDataContainer div#bottomNav,
     .page-node-6 div#imageDataContainer div#bottomNav {
 	width: 98vw;
 	left: 0;
 	height: 0;
     }
+    .node-type-exhibition div#imageDataContainer div#bottomNav a#bottomNavClose,
     .page-node-6 div#imageDataContainer div#bottomNav a#bottomNavClose {
 	right: 0;
 	top: -40vh;

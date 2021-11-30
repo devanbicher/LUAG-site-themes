@@ -33,8 +33,13 @@ input[type="submit"] {
     margin: 0 6px;
 }
 
+#footer .join-list a,
 #footer .webform-client-form input[type="submit"] {
-    height: 40px;
+    width: fit-content;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 6px;
     font-size: 12px;
     text-align: left;
@@ -47,6 +52,7 @@ input[type="submit"] {
     transition: .2s;
 }
 
+#footer .join-list a:hover,
 #footer .webform-client-form input[type="submit"]:hover {
     background: var(--accent) !important;
     color: #333;
